@@ -16,7 +16,7 @@ export function Footer() {
         <div><h3>Contacto referencial</h3><span>{contactData.phone}</span><span>{contactData.email}</span><div className="social-links"><a href={contactData.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><InstagramLogo /></a><a href={contactData.facebook} target="_blank" rel="noreferrer" aria-label="Facebook"><FacebookLogo /></a></div></div>
       </div>
       <div className="container footer-bottom">
-        <p>Diseño conceptual de Cybersys. No representa un sitio oficial ni una relación comercial confirmada con Grupo CGL.</p>
+        <p>Propuesta conceptual independiente desarrollada por Cybersys. No es el sitio oficial de Grupo CGL ni implica una relación comercial confirmada.</p>
         <Link to="/contacto">Revisar propuesta <ArrowUpRight /></Link>
       </div>
     </footer>

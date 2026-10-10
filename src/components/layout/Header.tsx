@@ -35,7 +35,6 @@ export function Header() {
 
   return (
     <>
-      <div className="demo-bar">Propuesta conceptual de rediseño <span>Demo no oficial</span></div>
       <header className={`site-header ${scrolled || location.pathname !== '/' ? 'site-header-solid' : ''}`}>
         <div className="container header-inner">
           <Link to="/" className="wordmark" aria-label="Grupo CGL, inicio"><span>CGL</span><small>GRUPO</small></Link>
@@ -61,10 +60,17 @@ export function Header() {
             <NavLink to="/contacto">Contacto</NavLink>
           </nav>
           <Link className="header-cta" to="/contacto">Solicitar asesoría</Link>
-          <button className="menu-toggle" type="button" aria-label="Abrir menú" onClick={() => setMobileOpen(true)}><List size={27} /></button>
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMobileOpen(true)}
+          ><List size={27} /></button>
         </div>
       </header>
-      <div className={`mobile-menu ${mobileOpen ? 'is-open' : ''}`} aria-hidden={!mobileOpen}>
+      <div id="mobile-navigation" className={`mobile-menu ${mobileOpen ? 'is-open' : ''}`} aria-hidden={!mobileOpen}>
         <button className="mobile-close" type="button" aria-label="Cerrar menú" onClick={() => setMobileOpen(false)}><X size={28} /></button>
         <nav aria-label="Navegación móvil" onClick={() => setMobileOpen(false)}>
           <Link to="/">Inicio</Link><Link to="/nosotros">Nosotros</Link><Link to="/servicios">Servicios</Link>

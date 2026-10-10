@@ -12,7 +12,7 @@ export function HomeHero() {
       <div className="container hero-content">
         <motion.p className="eyebrow" {...animation(0.05)}>INMOBILIARIA · CONSTRUCCIÓN · GESTIÓN</motion.p>
         <motion.h1 {...animation(0.12)}>Soluciones integrales para tus proyectos inmobiliarios.</motion.h1>
-        <motion.p className="hero-copy" {...animation(0.19)}>Asesoría, construcción, remodelación y gestión para cada etapa de tu inmueble.</motion.p>
+        <motion.p className="hero-copy" {...animation(0.19)}>Inmobiliaria, construcción, remodelación y administración de edificios. Soluciones profesionales para cada etapa de tu inmueble.</motion.p>
         <motion.div className="hero-actions" {...animation(0.26)}><ButtonLink to="/servicios" variant="light">Explorar servicios</ButtonLink><ButtonLink to="/contacto" variant="secondary">Solicitar asesoría</ButtonLink></motion.div>
       </div>
       <p className="reference-note">Imagen generada para esta propuesta conceptual</p>
