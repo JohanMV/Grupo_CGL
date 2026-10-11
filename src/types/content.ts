@@ -33,8 +33,18 @@ export interface Property {
   catalogZone?: 'Lima Norte' | 'Lima Centro' | 'Lima Este' | 'Lima Sur' | 'Callao'
   district?: string
   image: string
-  gallery: string[]
+  photos?: PropertyPhoto[]
   spaces?: string[]
   tags: string[]
   description: string
+}
+
+export interface PropertyPhoto {
+  id: string
+  src: string
+  alt: string
+  category: string
+  label: string
+  isReference: boolean
+  order: number
 }
