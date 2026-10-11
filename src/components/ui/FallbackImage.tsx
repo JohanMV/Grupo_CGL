@@ -9,6 +9,6 @@ interface FallbackImageProps {
 
 export function FallbackImage({ src, alt, className, loading = 'lazy' }: FallbackImageProps) {
   const [failed, setFailed] = useState(false)
-  if (failed) return <div className={`image-fallback ${className ?? ''}`} role="img" aria-label={alt}><span>Imagen referencial</span></div>
+  if (failed) return <div className={`image-fallback ${className ?? ''}`} role="img" aria-label={alt} />
   return <img src={src} alt={alt} className={className} loading={loading} onError={() => setFailed(true)} />
 }

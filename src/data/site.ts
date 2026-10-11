@@ -5,4 +5,3 @@ export const contactData = {
   facebook: 'https://www.facebook.com/grupocglperu/',
 }
 
-export const demoNotice = 'Propuesta conceptual de rediseño - Demo no oficial'

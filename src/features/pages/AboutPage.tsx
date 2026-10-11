@@ -1,17 +1,57 @@
-import { Buildings, Compass, HouseLine, PaintBrush } from '@phosphor-icons/react'
-import { Link } from 'react-router-dom'
+import { Buildings, Compass, Handshake, Ruler } from '@phosphor-icons/react'
 import studio from '@/assets/images/studio-collaboration.webp'
-import construction from '@/assets/images/construction-site.webp'
 import { ContactCTA, InteriorHero } from '@/components/sections'
-import { FallbackImage, Reveal, SectionHeading } from '@/components/ui'
-import { services } from '@/data/services'
+import { Reveal } from '@/components/ui'
 
-const icons = [HouseLine, Compass, PaintBrush, Buildings]
+const differentials = [
+  { icon: Compass, title: 'Visión integral', text: 'Cada necesidad se analiza considerando el inmueble como un conjunto.' },
+  { icon: Buildings, title: 'Especialidades conectadas', text: 'Las áreas inmobiliaria, técnica y operativa se articulan bajo una misma visión.' },
+  { icon: Handshake, title: 'Atención personalizada', text: 'La orientación parte del contexto, los objetivos y las prioridades de cada cliente.' },
+  { icon: Ruler, title: 'Criterio técnico', text: 'Los alcances y decisiones se revisan con orden, claridad y atención al detalle.' },
+]
 
 export function AboutPage() {
-  return <><InteriorHero title="Conoce Grupo CGL" text="Una propuesta de valor que integra soluciones inmobiliarias, diseño, construcción y gestión." image={studio} breadcrumbs={[{ label: 'Inicio', to: '/' }, { label: 'Nosotros' }]} />
-    <section className="section about-intro"><div className="container"><Reveal><h2>Un aliado para mirar el inmueble como un todo.</h2><p>Grupo CGL presenta una oferta que conecta necesidades inmobiliarias, técnicas y operativas. Esta propuesta digital organiza esas áreas para que cada visitante encuentre con claridad el punto de partida adecuado.</p></Reveal><Reveal><FallbackImage src={construction} alt="Profesionales revisando un proyecto, imagen referencial" /></Reveal></div></section>
-    <section className="section motivations"><div className="container"><SectionHeading title="Lo que orienta cada conversación." /><div><article><span>01</span><h3>Comprender el objetivo</h3><p>Escuchar el contexto antes de definir una solución.</p></article><article><span>02</span><h3>Coordinar especialidades</h3><p>Conectar los aspectos técnicos y de gestión necesarios.</p></article><article><span>03</span><h3>Dar claridad al proceso</h3><p>Ordenar alcance, decisiones y siguientes pasos.</p></article></div></div></section>
-    <section className="section about-areas"><div className="container"><h2>Cuatro áreas, una visión compartida.</h2>{services.map((service, index) => { const Icon = icons[index]; return <Link to={`/servicios/${service.slug}`} key={service.slug}><Icon size={28} weight="light" /><span><strong>{service.shortName}</strong><small>{service.summary}</small></span></Link> })}</div></section>
-    <section className="section multidisciplinary"><div className="container"><div><h2>Un equipo multidisciplinario para cada necesidad.</h2><p>Cuando no existen fotografías, nombres y cargos autorizados, una presentación responsable debe hablar de capacidades sin atribuir identidades o credenciales no confirmadas.</p></div><FallbackImage src={studio} alt="Mesa de trabajo multidisciplinaria, imagen referencial" /></div></section><ContactCTA title="Conversemos sobre tu proyecto." /></>
+  return <>
+    <InteriorHero
+      title="Conoce Grupo CGL"
+      text="Integramos soluciones inmobiliarias, construcción, remodelación y gestión para acompañar cada inmueble con una mirada coordinada."
+      image={studio}
+      breadcrumbs={[{ label: 'Inicio', to: '/' }, { label: 'Nosotros' }]}
+    />
+
+    <section className="about-vision">
+      <div className="container about-vision-grid">
+        <Reveal><h2>Una visión integral del sector inmobiliario.</h2></Reveal>
+        <Reveal className="about-vision-copy" delay={0.08}>
+          <p>Grupo CGL reúne especialidades vinculadas al inmueble para atender a propietarios, inversionistas y clientes que buscan soluciones conectadas. Un enfoque que facilita la coordinación y permite tomar decisiones con mayor claridad.</p>
+          <strong>Cada especialidad aporta su mirada. La coordinación les da sentido.</strong>
+        </Reveal>
+      </div>
+    </section>
+
+    <section className="about-values">
+      <div className="container">
+        <Reveal className="about-values-heading">
+          <h2>Confianza construida desde la forma de trabajar.</h2>
+          <p>Un acompañamiento claro, cercano y bien coordinado en cada etapa.</p>
+        </Reveal>
+        <div className="about-values-grid">
+          {differentials.map(({ icon: Icon, title, text }, index) => (
+            <article className="about-value" key={title}>
+              <Reveal delay={index * 0.06}>
+                <Icon size={28} weight="light" aria-hidden="true" />
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </Reveal>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <ContactCTA
+      title="Construyamos el siguiente paso de tu proyecto."
+      text="Conversemos sobre tu necesidad y descubre cómo las soluciones de Grupo CGL pueden acompañarla."
+    />
+  </>
 }

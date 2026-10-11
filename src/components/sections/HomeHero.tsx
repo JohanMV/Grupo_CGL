@@ -7,7 +7,7 @@ export function HomeHero() {
   const animation = (delay: number) => reduce ? {} : { initial: { opacity: 0, y: 18 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] as const } }
   return (
     <section className="home-hero">
-      <FallbackImage src={heroImage} alt="Residencia contemporánea de referencia al atardecer" loading="eager" />
+      <FallbackImage src={heroImage} alt="Residencia contemporánea al atardecer" loading="eager" />
       <div className="hero-scrim" />
       <div className="container hero-content">
         <motion.p className="eyebrow" {...animation(0.05)}>INMOBILIARIA · CONSTRUCCIÓN · GESTIÓN</motion.p>
@@ -15,7 +15,6 @@ export function HomeHero() {
         <motion.p className="hero-copy" {...animation(0.19)}>Inmobiliaria, construcción, remodelación y administración de edificios. Soluciones profesionales para cada etapa de tu inmueble.</motion.p>
         <motion.div className="hero-actions" {...animation(0.26)}><ButtonLink to="/servicios" variant="light">Explorar servicios</ButtonLink><ButtonLink to="/contacto" variant="secondary">Solicitar asesoría</ButtonLink></motion.div>
       </div>
-      <p className="reference-note">Imagen generada para esta propuesta conceptual</p>
     </section>
   )
 }

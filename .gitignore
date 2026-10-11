@@ -39,3 +39,4 @@ service-account*.json
 *.njsproj
 *.sln
 *.sw?
+*.impeccable

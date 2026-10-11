@@ -13,11 +13,10 @@ export function Footer() {
         </div>
         <div><h3>Empresa</h3><Link to="/nosotros">Nosotros</Link><Link to="/proyectos">Proyectos</Link><Link to="/contacto">Contacto</Link></div>
         <div><h3>Servicios</h3>{services.map((service) => <Link to={`/servicios/${service.slug}`} key={service.slug}>{service.shortName}</Link>)}</div>
-        <div><h3>Contacto referencial</h3><span>{contactData.phone}</span><span>{contactData.email}</span><div className="social-links"><a href={contactData.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><InstagramLogo /></a><a href={contactData.facebook} target="_blank" rel="noreferrer" aria-label="Facebook"><FacebookLogo /></a></div></div>
+        <div><h3>Contacto</h3><span>{contactData.phone}</span><span>{contactData.email}</span><div className="social-links"><a href={contactData.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><InstagramLogo /></a><a href={contactData.facebook} target="_blank" rel="noreferrer" aria-label="Facebook"><FacebookLogo /></a></div></div>
       </div>
       <div className="container footer-bottom">
-        <p>Propuesta conceptual independiente desarrollada por Cybersys. No es el sitio oficial de Grupo CGL ni implica una relación comercial confirmada.</p>
-        <Link to="/contacto">Revisar propuesta <ArrowUpRight /></Link>
+        <Link to="/contacto">Solicitar asesoría <ArrowUpRight /></Link>
       </div>
     </footer>
   )

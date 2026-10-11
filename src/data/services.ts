@@ -12,12 +12,12 @@ export const services: Service[] = [
     summary: 'Orientación para propietarios, compradores e inversionistas en cada etapa de una operación inmobiliaria.',
     description: 'Analizamos el objetivo, las características del inmueble y el contexto comercial para estructurar un acompañamiento claro y ordenado.',
     image: propertyImage, icon: 'building',
-    services: ['Venta y alquiler de propiedades', 'Captación y presentación de inmuebles', 'Valorización comercial referencial', 'Asesoría al propietario', 'Coordinación de visitas y negociación', 'Orientación documental', 'Saneamiento físico-legal', 'Preparación para alquiler temporal'],
+    services: ['Venta y alquiler de propiedades', 'Captación y presentación de inmuebles', 'Valorización comercial', 'Asesoría al propietario', 'Coordinación de visitas y negociación', 'Orientación documental', 'Saneamiento físico-legal', 'Preparación para alquiler temporal'],
     benefits: ['Decisiones con mejor contexto', 'Presentación cuidada del inmueble', 'Coordinación de principio a fin', 'Información centralizada'],
     steps: ['Comparte la información del inmueble', 'Revisamos el contexto y objetivo', 'Definimos una propuesta de acompañamiento', 'Coordinamos las siguientes acciones'],
     faqs: [
       { question: '¿Qué información necesito para una primera evaluación?', answer: 'Una descripción general del inmueble, su estado, documentación disponible y el objetivo de venta, alquiler o valorización.' },
-      { question: '¿La valorización mostrada en la web es automática?', answer: 'No. Esta demo no calcula valores. Una evaluación real requeriría información verificada y revisión del contexto comercial.' },
+      { question: '¿Cómo se realiza una valorización comercial?', answer: 'Analizamos las características del inmueble, su ubicación y el contexto del mercado para preparar una evaluación.' },
       { question: '¿Pueden orientar sobre documentación?', answer: 'El servicio puede contemplar una revisión inicial y coordinación de trámites. El alcance se define según cada caso.' },
     ],
     cta: 'Consultar por mi propiedad',
@@ -52,7 +52,7 @@ export const services: Service[] = [
     faqs: [
       { question: '¿Cómo se define el alcance de una remodelación?', answer: 'Se revisan el estado actual, los usos esperados, las prioridades y el nivel de intervención requerido.' },
       { question: '¿Puedo solicitar mobiliario a medida?', answer: 'Sí, puede considerarse dentro de la propuesta según el espacio, materiales y necesidades de uso.' },
-      { question: '¿Las imágenes son trabajos ejecutados?', answer: 'No. Las imágenes de esta propuesta son referenciales y no se atribuyen como obras de Grupo CGL.' },
+      { question: '¿Cómo se define el alcance de una obra?', answer: 'Revisamos los objetivos, las condiciones del espacio y los requerimientos técnicos para estructurar las etapas de trabajo.' },
     ],
     cta: 'Quiero remodelar un espacio',
   },
@@ -69,7 +69,7 @@ export const services: Service[] = [
     faqs: [
       { question: '¿Qué datos ayudan a evaluar un edificio?', answer: 'Cantidad de áreas comunes, servicios actuales, necesidades de mantenimiento y principales retos de gestión.' },
       { question: '¿La propuesta incluye mantenimiento?', answer: 'El alcance puede considerar coordinación y seguimiento de mantenimiento. Los servicios se precisan para cada edificio.' },
-      { question: '¿Esta demo incluye un portal de residentes?', answer: 'No. Esta propuesta presenta el servicio y no incorpora facturación, portal de residentes ni sistemas administrativos.' },
+      { question: '¿Qué comprende la administración de un edificio?', answer: 'El servicio puede incluir coordinación operativa, atención de incidencias, mantenimiento preventivo, cobranza y reportes para la junta de propietarios.' },
     ],
     cta: 'Solicitar propuesta de administración',
   },
