@@ -30,8 +30,11 @@ export interface Property {
   operation: 'Venta' | 'Alquiler'
   type: 'Departamento' | 'Casa' | 'Oficina'
   zone: 'Lima Moderna' | 'Lima Top' | 'Otras zonas'
+  catalogZone?: 'Lima Norte' | 'Lima Centro' | 'Lima Este' | 'Lima Sur' | 'Callao'
+  district?: string
   image: string
   gallery: string[]
+  spaces?: string[]
   tags: string[]
   description: string
 }

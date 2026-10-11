@@ -1,21 +1,82 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { ArrowRight, MagnifyingGlass, X } from '@phosphor-icons/react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { FallbackImage } from '@/components/ui'
 import { properties } from '@/data/properties'
+import type { Property } from '@/types/content'
+
+const zones = ['Lima Norte', 'Lima Centro', 'Lima Este', 'Lima Sur', 'Callao'] as const
+const types = [...new Set(properties.map((property) => property.type))]
+
+function normalized(value: string) {
+  return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es').trim()
+}
+
+function PropertyCard({ property }: { property: Property }) {
+  const destination = `/propiedades/${property.slug}`
+  const location = [property.district, property.catalogZone].filter(Boolean).join(' · ')
+
+  return <article className="property-card catalog-card">
+    <Link className="catalog-card-image" to={destination} aria-label={`Ver ${property.title}`}>
+      <FallbackImage src={property.image} alt={property.title} />
+    </Link>
+    <div className="catalog-card-copy">
+      <small>{property.operation} · {property.type}</small>
+      <h2><Link to={destination}>{property.title}</Link></h2>
+      {location && <p className="catalog-card-location">{location}</p>}
+      {property.tags.length > 0 && <ul className="catalog-card-features" aria-label="Características">
+        {property.tags.slice(0, 3).map((tag) => <li key={tag}>{tag}</li>)}
+      </ul>}
+      <Link className="catalog-card-link" to={destination}>Ver propiedad <ArrowRight aria-hidden="true" /></Link>
+    </div>
+  </article>
+}
 
 export function PropertyCatalog() {
-  const [search, setSearch] = useState('')
-  const [operation, setOperation] = useState('Todas')
-  const [type, setType] = useState('Todos')
-  const [zone, setZone] = useState('Todas')
-  const filtered = useMemo(() => properties.filter((property) => {
-    const matchesText = `${property.title} ${property.tags.join(' ')}`.toLowerCase().includes(search.toLowerCase())
-    return matchesText && (operation === 'Todas' || property.operation === operation) && (type === 'Todos' || property.type === type) && (zone === 'Todas' || property.zone === zone)
-  }), [search, operation, type, zone])
-  const reset = () => { setSearch(''); setOperation('Todas'); setType('Todos'); setZone('Todas') }
-  return <><div className="catalog-filters"><label className="search-field"><span>Buscar por nombre o característica</span><div><MagnifyingGlass /><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Ej. terraza, oficina, jardín" /></div></label><label><span>Operación</span><select value={operation} onChange={(event) => setOperation(event.target.value)}><option>Todas</option><option>Venta</option><option>Alquiler</option></select></label><label><span>Tipo</span><select value={type} onChange={(event) => setType(event.target.value)}><option>Todos</option><option>Departamento</option><option>Casa</option><option>Oficina</option></select></label><label><span>Zona</span><select value={zone} onChange={(event) => setZone(event.target.value)}><option>Todas</option><option>Lima Moderna</option><option>Lima Top</option><option>Otras zonas</option></select></label></div>
-    <div className="catalog-meta"><p>{filtered.length} {filtered.length === 1 ? 'propiedad' : 'propiedades'}</p><button type="button" onClick={reset}><X /> Limpiar filtros</button></div>
-    {filtered.length ? <div className="catalog-grid">{filtered.map((property) => <article className="property-card" key={property.slug}><Link to={`/propiedades/${property.slug}`}><div className="property-image"><FallbackImage src={property.image} alt={property.title} /></div><div className="property-copy"><small>{property.operation} · {property.type}</small><h2>{property.title}</h2><p>{property.type} / {property.zone}</p><div>{property.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><b>Ver detalle <ArrowRight /></b></div></Link></article>)}</div> : <div className="empty-state"><h2>No hay propiedades con esos criterios.</h2><p>Prueba con otros filtros o vuelve a ver todas las propiedades.</p><button type="button" onClick={reset}>Ver propiedades</button></div>}
+  const [params, setParams] = useSearchParams()
+  const search = params.get('buscar') ?? ''
+  const operation = params.get('operacion') ?? ''
+  const type = params.get('tipo') ?? ''
+  const zone = params.get('zona') ?? ''
+  const district = params.get('distrito') ?? ''
+
+  const districts = useMemo(() => [...new Set(properties
+    .filter((property) => !zone || property.catalogZone === zone)
+    .map((property) => property.district)
+    .filter((value): value is string => Boolean(value)))].sort((a, b) => a.localeCompare(b, 'es')), [zone])
+
+  const updateFilter = (key: string, value: string) => {
+    const next = new URLSearchParams(params)
+    if (value) next.set(key, value)
+    else next.delete(key)
+    if (key === 'zona' && value && district && !properties.some((property) => property.catalogZone === value && property.district === district)) next.delete('distrito')
+    setParams(next, { replace: true, preventScrollReset: true })
+  }
+
+  const active = Boolean(search || operation || type || zone || district)
+  const reset = () => setParams(new URLSearchParams(), { replace: true, preventScrollReset: true })
+  const term = normalized(search)
+  const filtered = properties.filter((property) => {
+    const searchable = normalized([property.title, property.type, property.district, property.catalogZone, property.description, ...property.tags].filter(Boolean).join(' '))
+    return (!term || searchable.includes(term))
+      && (!operation || property.operation === operation)
+      && (!type || property.type === type)
+      && (!zone || property.catalogZone === zone)
+      && (!district || property.district === district)
+  })
+
+  return <>
+    <div className="catalog-filters" role="search" aria-label="Buscar propiedades">
+      <label className="catalog-search"><span>Buscar</span><span className="catalog-search-input"><MagnifyingGlass size={19} aria-hidden="true" /><input type="search" value={search} onChange={(event) => updateFilter('buscar', event.target.value)} placeholder="Ej. terraza, departamento, Miraflores" /></span></label>
+      <label><span>Operación</span><select value={operation} onChange={(event) => updateFilter('operacion', event.target.value)}><option value="">Todas</option><option>Venta</option><option>Alquiler</option></select></label>
+      <label><span>Tipo</span><select value={type} onChange={(event) => updateFilter('tipo', event.target.value)}><option value="">Todos</option>{types.map((item) => <option key={item}>{item}</option>)}</select></label>
+      <label><span>Zona</span><select value={zone} onChange={(event) => updateFilter('zona', event.target.value)}><option value="">Todas las zonas</option>{zones.map((item) => <option key={item}>{item}</option>)}</select></label>
+      <label><span>Distrito</span><select value={district} onChange={(event) => updateFilter('distrito', event.target.value)}><option value="">Todos los distritos</option>{districts.map((item) => <option key={item}>{item}</option>)}</select></label>
+    </div>
+    <div className="catalog-meta"><p role="status">{filtered.length} {filtered.length === 1 ? 'propiedad' : 'propiedades'}</p>{active && <button type="button" onClick={reset}><X size={16} aria-hidden="true" /> Limpiar filtros</button>}</div>
+    {filtered.length > 0
+      ? <div className="catalog-grid">{filtered.map((property) => <PropertyCard property={property} key={property.slug} />)}</div>
+      : <div className="catalog-empty"><h2>No encontramos propiedades con esos filtros.</h2><p>Prueba con otra combinación o vuelve a ver el catálogo completo.</p><button type="button" onClick={reset}>Limpiar filtros <ArrowRight size={18} aria-hidden="true" /></button></div>}
+    <p className="catalog-disclosure">Catálogo demostrativo: inmuebles de ejemplo, no ofertas verificadas de Grupo CGL.</p>
   </>
 }
