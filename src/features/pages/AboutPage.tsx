@@ -1,5 +1,6 @@
 import { Buildings, Compass, Handshake, Ruler } from '@phosphor-icons/react'
 import studio from '@/assets/images/studio-collaboration.webp'
+import team from '@/assets/images/about-team-collaboration.webp'
 import { ContactCTA, InteriorHero } from '@/components/sections'
 import { Reveal } from '@/components/ui'
 
@@ -25,6 +26,22 @@ export function AboutPage() {
         <Reveal className="about-vision-copy" delay={0.08}>
           <p>Grupo CGL reúne especialidades vinculadas al inmueble para atender a propietarios, inversionistas y clientes que buscan soluciones conectadas. Un enfoque que facilita la coordinación y permite tomar decisiones con mayor claridad.</p>
           <strong>Cada especialidad aporta su mirada. La coordinación les da sentido.</strong>
+        </Reveal>
+      </div>
+    </section>
+
+    <section className="about-team" aria-labelledby="about-team-title">
+      <div className="container about-team-grid">
+        <Reveal className="about-team-visual">
+          <figure>
+            <img src={team} alt="Profesionales conversando sobre planos y materiales en una mesa de trabajo" loading="lazy" decoding="async" />
+            <figcaption>Imagen generada para representar el trabajo en equipo</figcaption>
+          </figure>
+        </Reveal>
+        <Reveal className="about-team-copy" delay={0.08}>
+          <h2 id="about-team-title">Un equipo que trabaja contigo.</h2>
+          <p>Detrás de cada decisión hay personas que escuchan, comparten ideas y coordinan distintas especialidades. Así transformamos una necesidad en un camino claro para cada inmueble.</p>
+          <span>Una misma mesa. Diferentes perspectivas.</span>
         </Reveal>
       </div>
     </section>

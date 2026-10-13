@@ -9,7 +9,7 @@ import { NotFoundPage } from './NotFoundPage'
 type OpenPhoto = (index: number, trigger: HTMLButtonElement) => void
 
 function PhotoTile({ photo, index, onOpen, className = '' }: { photo: PropertyPhoto; index: number; onOpen: OpenPhoto; className?: string }) {
-  return <button className={`property-photo-tile ${className}`} type="button" onClick={(event) => onOpen(index, event.currentTarget)} aria-label={`Ampliar ${photo.label.toLowerCase()}${photo.isReference ? ', fotografía referencial' : ''}`}>
+  return <button className={`property-photo-tile ${className}`} type="button" onClick={(event) => onOpen(index, event.currentTarget)} aria-label={`Ampliar ${photo.label.toLowerCase()}`}>
     <FallbackImage src={photo.src} alt={photo.alt} />
     <span className="property-photo-label">{photo.label}</span>
   </button>
@@ -22,9 +22,9 @@ function PropertyGallery({ photos, onOpen }: { photos: PropertyPhoto[]; onOpen: 
 
   const move = (direction: number) => setMobileIndex((current) => (current + direction + photos.length) % photos.length)
 
-  return <section className="container property-photo-gallery" aria-label="Galería de referencias visuales">
+  return <section className="container property-photo-gallery" aria-label="Galería de imágenes">
     <div className="property-gallery-topline">
-      <p>{photos.some((photo) => photo.isReference) ? 'Fotografías referenciales independientes. No muestran un único inmueble.' : 'Explora las fotografías de esta propiedad.'}</p>
+      <p>Explora las imágenes y los espacios destacados.</p>
       <span>{photos.length} {photos.length === 1 ? 'fotografía' : 'fotografías'}</span>
     </div>
     <div className="property-photo-mosaic" data-count={Math.min(photos.length, 3)}>
@@ -75,14 +75,13 @@ function PropertyLightbox({ photos, index, onChange, onClose, returnFocus }: { p
   }
 
   const photo = photos[index]
-  return <div className="property-lightbox" ref={dialogRef} role="dialog" aria-modal="true" aria-label="Galería ampliada de referencias visuales" onKeyDown={handleKeyDown}>
+  return <div className="property-lightbox" ref={dialogRef} role="dialog" aria-modal="true" aria-label="Galería de imágenes ampliada" onKeyDown={handleKeyDown}>
     <div className="property-lightbox-bar"><span>{index + 1} de {photos.length} · {photo.label}</span><button ref={closeRef} type="button" onClick={onClose} aria-label="Cerrar galería"><X size={24} aria-hidden="true" /></button></div>
     <div className="property-lightbox-stage">
       {photos.length > 1 && <button type="button" onClick={() => onChange(-1)} aria-label="Fotografía anterior"><ArrowLeft size={24} aria-hidden="true" /></button>}
       <FallbackImage src={photo.src} alt={photo.alt} loading="eager" />
       {photos.length > 1 && <button type="button" onClick={() => onChange(1)} aria-label="Fotografía siguiente"><ArrowRight size={24} aria-hidden="true" /></button>}
     </div>
-    {photo.isReference && <p>Imagen referencial independiente. No corresponde necesariamente a esta propiedad.</p>}
   </div>
 }
 
@@ -94,7 +93,7 @@ function EnvironmentExplorer({ photos, onOpen }: { photos: PropertyPhoto[]; onOp
 
   return <section className="property-explorer" aria-labelledby="property-explorer-title">
     <div className="container">
-      <div className="property-explorer-heading"><h2 id="property-explorer-title">Explora cada espacio</h2><p>{photos.some((photo) => photo.isReference) ? 'Recorre las referencias disponibles por tipo de ambiente. Estas imágenes no confirman los espacios de este inmueble.' : 'Conoce los ambientes, la distribución y los detalles de esta propiedad.'}</p></div>
+      <div className="property-explorer-heading"><h2 id="property-explorer-title">Explora cada espacio</h2><p>Recorre los ambientes y sus detalles.</p></div>
       {categories.length > 2 && <div className="property-explorer-filters" role="group" aria-label="Filtrar ambientes">
         {categories.map((item) => <button key={item} type="button" aria-pressed={category === item} onClick={() => setCategory(item)}>{item}</button>)}
       </div>}
@@ -130,7 +129,6 @@ function PropertyDetailContent({ property }: { property: Property }) {
         <Breadcrumbs light items={[{ label: 'Inicio', to: '/' }, { label: 'Propiedades', to: '/propiedades' }, { label: property.title }]} />
         <h1>{property.title}</h1>
         <p>{property.operation} <span aria-hidden="true">·</span> {property.type} <span aria-hidden="true">·</span> {location}</p>
-        {photos.some((photo) => photo.isReference) && <small>Imágenes referenciales · Propiedad conceptual</small>}
       </div>
     </section>
 
@@ -161,7 +159,6 @@ function PropertyDetailContent({ property }: { property: Property }) {
 
     <section className="container property-location" aria-labelledby="property-location-title">
       <div><h2 id="property-location-title">Ubicación</h2><p><MapPin size={22} aria-hidden="true" />{location}</p></div>
-      <span>Ubicación referencial. Consulta para obtener más información.</span>
     </section>
 
     <section className="property-contact-band" aria-labelledby="property-contact-title"><div className="container">

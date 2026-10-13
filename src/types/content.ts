@@ -20,6 +20,7 @@ export interface Project {
   category: 'Construcción' | 'Remodelación' | 'Espacios comerciales'
   summary: string
   image: string
+  banner?: string
   gallery: string[]
   scope: string[]
 }
