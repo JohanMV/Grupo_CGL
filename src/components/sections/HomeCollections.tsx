@@ -1,24 +1,184 @@
-import { ArrowRight } from '@phosphor-icons/react'
+import { ArrowRight as PhosphorArrowRight } from '@phosphor-icons/react'
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
+import { useState } from 'react'
+import { ArrowLeft, ArrowRight, ClipboardCheck, DraftingCompass, HardHat, MessageCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { projects } from '@/data/projects'
 import { properties } from '@/data/properties'
 import { ButtonLink, FallbackImage, Reveal, SectionHeading } from '@/components/ui'
 
 export function FeaturedProjects() {
-  return <section className="section featured-projects"><div className="container"><Reveal><SectionHeading title="Proyectos de construcción y remodelación." text="Soluciones desarrolladas para transformar viviendas, edificios y espacios de trabajo." /></Reveal><div className="projects-asym">{projects.slice(0, 3).map((project, index) => <Reveal key={project.slug} className={`project-tile project-tile-${index + 1}`}><Link to={`/proyectos/${project.slug}`}><FallbackImage src={project.image} alt={project.title} /><div><small>{project.category}</small><h3>{project.title}</h3><span>Ver proyecto <ArrowRight /></span></div></Link></Reveal>)}</div><ButtonLink to="/proyectos" variant="text">Explorar proyectos</ButtonLink></div></section>
+  return <section className="section featured-projects"><div className="container"><Reveal><SectionHeading title="Proyectos de construcción y remodelación." text="Soluciones desarrolladas para transformar viviendas, edificios y espacios de trabajo." /></Reveal><div className="projects-asym">{projects.slice(0, 3).map((project, index) => <Reveal key={project.slug} className={`project-tile project-tile-${index + 1}`}><Link to={`/proyectos/${project.slug}`}><FallbackImage src={project.image} alt={project.title} /><div><small>{project.category}</small><h3>{project.title}</h3><span>Ver proyecto <PhosphorArrowRight /></span></div></Link></Reveal>)}</div><ButtonLink to="/proyectos" variant="text">Explorar proyectos</ButtonLink></div></section>
 }
 
 export function PropertyPreview() {
-  return <section className="section property-preview"><div className="container"><Reveal><SectionHeading title="Explora propiedades y oportunidades." text="Encuentra espacios residenciales y comerciales para tus próximos proyectos." /></Reveal><div className="property-preview-grid">{properties.slice(0, 3).map((property, index) => <Reveal key={property.slug} delay={index * 0.06}><article className="property-card"><Link to={`/propiedades/${property.slug}`}><div className="property-image"><FallbackImage src={property.image} alt={property.title} /></div><div className="property-copy"><small>{property.operation} · {property.type}</small><h3>{property.title}</h3><p>{property.type}<span aria-hidden="true">/</span>{property.zone}</p><div>{property.tags.slice(0, 2).map((tag) => <span key={tag}>{tag}</span>)}</div><b>Ver propiedad <ArrowRight /></b></div></Link></article></Reveal>)}</div><ButtonLink to="/propiedades" variant="text">Ver propiedades</ButtonLink></div></section>
+  return <section className="section property-preview"><div className="container"><Reveal><SectionHeading title="Explora propiedades y oportunidades." text="Encuentra espacios residenciales y comerciales para tus próximos proyectos." /></Reveal><div className="property-preview-grid">{properties.slice(0, 3).map((property, index) => <Reveal key={property.slug} delay={index * 0.06}><article className="property-card"><Link to={`/propiedades/${property.slug}`}><div className="property-image"><FallbackImage src={property.image} alt={property.title} /></div><div className="property-copy"><small>{property.operation} · {property.type}</small><h3>{property.title}</h3><p>{property.type}<span aria-hidden="true">/</span>{property.zone}</p><div>{property.tags.slice(0, 2).map((tag) => <span key={tag}>{tag}</span>)}</div><b>Ver propiedad <PhosphorArrowRight /></b></div></Link></article></Reveal>)}</div><ButtonLink to="/propiedades" variant="text">Ver propiedades</ButtonLink></div></section>
 }
 
 const steps = [
-  ['01', 'Cuéntanos tu necesidad', 'Conocemos tus objetivos y el tipo de servicio que buscas.'],
-  ['02', 'Evaluamos tu proyecto', 'Revisamos las características y requerimientos relevantes.'],
-  ['03', 'Preparamos una propuesta', 'Definimos una solución y un alcance según tu necesidad.'],
-  ['04', 'Acompañamos el desarrollo', 'Coordinamos las etapas previstas para el servicio contratado.'],
+  {
+    number: '01',
+    label: 'PRIMER CONTACTO',
+    title: 'Cuéntanos tu necesidad',
+    summary: 'Conocemos tus objetivos y el tipo de servicio que buscas.',
+    detailTitle: 'Todo comienza con tu idea.',
+    detail: 'Conversamos sobre tus objetivos, el tipo de inmueble o espacio y tus expectativas para entender qué solución necesitas.',
+    icon: MessageCircle,
+  },
+  {
+    number: '02',
+    label: 'EVALUACIÓN',
+    title: 'Evaluamos tu proyecto',
+    summary: 'Revisamos las características y requerimientos relevantes.',
+    detailTitle: 'Analizamos las necesidades del proyecto.',
+    detail: 'Revisamos la información disponible, las condiciones del espacio y los requerimientos para identificar un enfoque adecuado.',
+    icon: ClipboardCheck,
+  },
+  {
+    number: '03',
+    label: 'PROPUESTA',
+    title: 'Preparamos una propuesta',
+    summary: 'Definimos una solución y un alcance según tu necesidad.',
+    detailTitle: 'Una solución clara y estructurada.',
+    detail: 'Preparamos una propuesta que establece el alcance, los entregables y las condiciones correspondientes al servicio solicitado.',
+    icon: DraftingCompass,
+  },
+  {
+    number: '04',
+    label: 'DESARROLLO',
+    title: 'Acompañamos el desarrollo',
+    summary: 'Coordinamos las etapas previstas para el servicio contratado.',
+    detailTitle: 'Te acompañamos durante el proceso.',
+    detail: 'Coordinamos las actividades previstas, mantenemos la comunicación y damos seguimiento al desarrollo según los acuerdos establecidos.',
+    icon: HardHat,
+  },
 ]
 
 export function Methodology() {
-  return <section className="section methodology"><div className="container"><Reveal><SectionHeading title="Así desarrollamos cada proyecto." /></Reveal><div className="method-grid">{steps.map(([number, title, text], index) => <Reveal key={number} delay={index * 0.06}><span>{number}</span><h3>{title}</h3><p>{text}</p></Reveal>)}</div><p className="method-note">Cada etapa se coordina según el servicio y el alcance acordado.</p></div></section>
+  const [activeStep, setActiveStep] = useState(1)
+  const reduceMotion = useReducedMotion()
+  const selectedStep = steps[activeStep]
+  const MobileIcon = selectedStep.icon
+  const move = (direction: number) => setActiveStep((current) => (current + direction + steps.length) % steps.length)
+
+  return <section className="section methodology" aria-labelledby="methodology-title">
+    <div className="container methodology-container">
+      <Reveal className="methodology-header">
+        <div className="methodology-heading">
+          <p className="methodology-eyebrow"><span aria-hidden="true" />Nuestro proceso</p>
+          <h2 id="methodology-title">Así desarrollamos cada proyecto.</h2>
+        </div>
+        <p className="methodology-intro">Un proceso claro y personalizado, desde la primera conversación hasta el desarrollo de tu proyecto.</p>
+      </Reveal>
+
+      <div className="method-mobile">
+        <div className="method-mobile-steps" role="group" aria-label="Seleccionar etapa del proceso">
+          {steps.map((step, index) => {
+            const isActive = activeStep === index
+            return <div className={`method-mobile-step${isActive ? ' is-active' : ''}${index <= activeStep ? ' is-complete' : ''}`} key={step.number}>
+              <button
+                type="button"
+                aria-label={`Etapa ${step.number}: ${step.title}`}
+                aria-pressed={isActive}
+                aria-controls="method-mobile-card"
+                onClick={() => setActiveStep(index)}
+              >{step.number}</button>
+              <span aria-hidden="true" />
+            </div>
+          })}
+        </div>
+
+        <motion.div
+          className="method-mobile-card-shell"
+          id="method-mobile-card"
+          layout={!reduceMotion}
+          transition={{ duration: .28, ease: [0.16, 1, 0.3, 1] }}
+          aria-live="polite"
+        >
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.article
+              className="method-mobile-card"
+              key={selectedStep.number}
+              initial={reduceMotion ? false : { opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={reduceMotion ? undefined : { opacity: 0, x: -10 }}
+              transition={{ duration: .22, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <div className="method-mobile-card-topline">
+                <span className="method-mobile-icon"><MobileIcon size={22} strokeWidth={1.8} aria-hidden="true" /></span>
+                <span>Etapa {selectedStep.number} / 04</span>
+              </div>
+              <p className="method-mobile-label">{selectedStep.label}</p>
+              <h3>{selectedStep.title}</h3>
+              <p className="method-mobile-detail">{selectedStep.detail}</p>
+              <div className="method-mobile-card-footer">
+                <span>Paso {activeStep + 1} de {steps.length}</span>
+                <div className="method-mobile-controls">
+                  <button type="button" onClick={() => move(-1)} aria-label="Ver etapa anterior"><ArrowLeft size={20} strokeWidth={1.7} aria-hidden="true" /></button>
+                  <button type="button" onClick={() => move(1)} aria-label="Ver etapa siguiente"><ArrowRight size={20} strokeWidth={1.7} aria-hidden="true" /></button>
+                </div>
+              </div>
+            </motion.article>
+          </AnimatePresence>
+        </motion.div>
+      </div>
+
+      <div className="method-timeline">
+        <div className="method-connector" aria-hidden="true" />
+        <div className="method-grid" role="group" aria-label="Etapas de nuestro proceso">
+          {steps.map((step, index) => {
+            const Icon = step.icon
+            const isActive = activeStep === index
+            return <motion.button
+              className={`method-card${isActive ? ' is-active' : ''}`}
+              type="button"
+              key={step.number}
+              aria-pressed={isActive}
+              aria-controls="method-detail-panel"
+              onClick={() => setActiveStep(index)}
+              whileHover={reduceMotion ? undefined : { y: -5 }}
+              whileTap={reduceMotion ? undefined : { scale: .99 }}
+              transition={{ duration: .24, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <span className="method-step-number">{step.number}</span>
+              <span className="method-icon"><Icon size={23} strokeWidth={1.8} aria-hidden="true" /></span>
+              <strong>{step.title}</strong>
+              <span className="method-summary">{step.summary}</span>
+              <ArrowRight className="method-card-arrow" size={20} strokeWidth={1.7} aria-hidden="true" />
+            </motion.button>
+          })}
+        </div>
+      </div>
+
+      <div className="method-detail-shell" id="method-detail-panel" aria-live="polite">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            className="method-detail"
+            key={selectedStep.number}
+            initial={reduceMotion ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={reduceMotion ? undefined : { opacity: 0, y: -8 }}
+            transition={{ duration: .24, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className="method-detail-copy">
+              <p className="method-detail-label">Etapa {selectedStep.number} / {selectedStep.label}</p>
+              <h3>{selectedStep.detailTitle}</h3>
+              <p>{selectedStep.detail}</p>
+            </div>
+            <div className="method-controls">
+              <button type="button" onClick={() => move(-1)} aria-label="Ver etapa anterior"><ArrowLeft size={21} strokeWidth={1.7} aria-hidden="true" /></button>
+              <button type="button" onClick={() => move(1)} aria-label="Ver etapa siguiente"><ArrowRight size={21} strokeWidth={1.7} aria-hidden="true" /></button>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <div className="method-footer">
+        <p className="method-note">Cada etapa se coordina según el servicio y el alcance acordado.</p>
+        <div className="method-progress" role="img" aria-label={`Etapa ${activeStep + 1} de ${steps.length}`}>
+          {steps.map((step, index) => <span key={step.number} className={index <= activeStep ? 'is-complete' : ''} />)}
+        </div>
+      </div>
+    </div>
+  </section>
 }
