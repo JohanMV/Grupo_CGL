@@ -134,7 +134,6 @@ export function Methodology() {
               type="button"
               key={step.number}
               aria-pressed={isActive}
-              aria-controls="method-detail-panel"
               onClick={() => setActiveStep(index)}
               whileHover={reduceMotion ? undefined : { y: -5 }}
               whileTap={reduceMotion ? undefined : { scale: .99 }}
@@ -143,34 +142,23 @@ export function Methodology() {
               <span className="method-step-number">{step.number}</span>
               <span className="method-icon"><Icon size={23} strokeWidth={1.8} aria-hidden="true" /></span>
               <strong>{step.title}</strong>
-              <span className="method-summary">{step.summary}</span>
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  className={`method-summary${isActive ? ' method-card-detail' : ''}`}
+                  key={isActive ? `${step.number}-detail` : `${step.number}-summary`}
+                  initial={reduceMotion ? false : { opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={reduceMotion ? undefined : { opacity: 0, y: -5 }}
+                  transition={{ duration: .18, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  {isActive && <span className="method-card-detail-title">{step.detailTitle}</span>}
+                  {isActive ? step.detail : step.summary}
+                </motion.span>
+              </AnimatePresence>
               <ArrowRight className="method-card-arrow" size={20} strokeWidth={1.7} aria-hidden="true" />
             </motion.button>
           })}
         </div>
-      </div>
-
-      <div className="method-detail-shell" id="method-detail-panel" aria-live="polite">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            className="method-detail"
-            key={selectedStep.number}
-            initial={reduceMotion ? false : { opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={reduceMotion ? undefined : { opacity: 0, y: -8 }}
-            transition={{ duration: .24, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <div className="method-detail-copy">
-              <p className="method-detail-label">Etapa {selectedStep.number} / {selectedStep.label}</p>
-              <h3>{selectedStep.detailTitle}</h3>
-              <p>{selectedStep.detail}</p>
-            </div>
-            <div className="method-controls">
-              <button type="button" onClick={() => move(-1)} aria-label="Ver etapa anterior"><ArrowLeft size={21} strokeWidth={1.7} aria-hidden="true" /></button>
-              <button type="button" onClick={() => move(1)} aria-label="Ver etapa siguiente"><ArrowRight size={21} strokeWidth={1.7} aria-hidden="true" /></button>
-            </div>
-          </motion.div>
-        </AnimatePresence>
       </div>
 
       <div className="method-footer">

@@ -168,9 +168,9 @@ p { color: #5e646b; line-height: 1.72; }
 .method-timeline { position: relative; padding-top: 45px; }
 .method-connector { position: absolute; top: 2px; right: 4.5%; left: 4.5%; height: 1px; background: #c9964a; }
 .method-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.7vw, 24px); }
-.method-card { position: relative; min-width: 0; min-height: 300px; display: flex; flex-direction: column; align-items: flex-start; padding: 28px 26px 24px; color: #142335; border: 1px solid #dedfdb; border-radius: 9px; background: #fff; box-shadow: 0 11px 28px rgba(25,46,71,.045); text-align: left; cursor: pointer; transition: color .25s var(--ease), background-color .25s var(--ease), border-color .25s var(--ease), box-shadow .25s var(--ease); }
+.method-card { position: relative; min-width: 0; min-height: 340px; display: flex; flex-direction: column; align-items: flex-start; padding: 28px 26px 24px; color: #142335; border: 1px solid #dedfdb; border-radius: 9px; background: #fff; box-shadow: 0 11px 28px rgba(25,46,71,.045); text-align: left; cursor: pointer; transition: color .25s var(--ease), background-color .25s var(--ease), border-color .25s var(--ease), box-shadow .25s var(--ease); }
 .method-card:hover { border-color: #c6b18c; box-shadow: 0 18px 38px rgba(25,46,71,.1); }
-.method-card:focus-visible, .method-controls button:focus-visible { outline: 3px solid rgba(184,135,64,.44); outline-offset: 3px; }
+.method-card:focus-visible { outline: 3px solid rgba(184,135,64,.44); outline-offset: 3px; }
 .method-card.is-active { color: #fff; border-color: #192e47; background: #192e47; box-shadow: 0 22px 46px rgba(25,46,71,.22); }
 .method-step-number { position: absolute; top: -62px; left: 16px; width: 38px; height: 38px; display: grid; place-items: center; color: #192e47; border: 1px solid #c9964a; border-radius: 50%; background: #f7f7f4; font-size: .69rem; font-weight: 800; font-variant-numeric: tabular-nums; transition: color .25s var(--ease), background-color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease); }
 .method-card.is-active .method-step-number { color: #fff; border-color: #192e47; background: #192e47; box-shadow: 0 0 0 7px rgba(25,46,71,.11); transform: scale(1.08); }
@@ -179,18 +179,11 @@ p { color: #5e646b; line-height: 1.72; }
 .method-card strong { max-width: 17ch; margin-bottom: 14px; font-size: 1rem; line-height: 1.35; }
 .method-summary { max-width: 27ch; color: #65707b; font-size: .86rem; line-height: 1.65; transition: color .25s var(--ease); }
 .method-card.is-active .method-summary { color: #d8e0e8; }
+.method-card-detail { display: block; font-size: .82rem; line-height: 1.58; }
+.method-card-detail-title { display: block; margin-bottom: 8px; color: #fff; font-size: .86rem; font-weight: 700; line-height: 1.4; }
 .method-card-arrow { margin-top: auto; color: #b77822; transition: transform .25s var(--ease), color .25s var(--ease); }
 .method-card:hover .method-card-arrow { transform: translateX(4px); }
 .method-card.is-active .method-card-arrow { color: #e1b66f; }
-.method-detail-shell { min-height: 190px; margin-top: 28px; padding: 0; border: 1px solid #d8dad6; border-radius: 9px; background: #fff; box-shadow: 0 13px 32px rgba(25,46,71,.045); overflow: hidden; }
-.method-detail { min-height: 188px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 42px; padding: 30px 34px; }
-.method-detail-label { margin: 0 0 13px; color: #9a6c28; font-size: .65rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
-.method-detail h3 { margin: 0 0 8px; color: #142335; font-size: clamp(1.35rem, 2.1vw, 2rem); line-height: 1.2; letter-spacing: -.02em; }
-.method-detail-copy > p:last-child { max-width: 78ch; margin: 0; color: #5d6873; font-size: .89rem; line-height: 1.65; }
-.method-controls { display: flex; gap: 10px; }
-.method-controls button { width: 46px; height: 46px; display: grid; place-items: center; color: #192e47; border: 1px solid #d3d6d2; border-radius: 6px; background: #f5f5f2; cursor: pointer; transition: color .2s var(--ease), background-color .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease); }
-.method-controls button:hover { color: #fff; border-color: #192e47; background: #192e47; }
-.method-controls button:active { transform: translateY(1px); }
 .method-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 20px; }
 .method-note { margin: 0; color: #66717b; font-size: .72rem; }
 .method-progress { display: grid; grid-template-columns: repeat(4, 24px); gap: 5px; }
@@ -599,7 +592,7 @@ p { color: #5e646b; line-height: 1.72; }
   .methodology-eyebrow > span { width: 34px; }
   .methodology-intro { max-width: 36ch; padding: 0; border-left: 0; font-size: .91rem; line-height: 1.58; }
   .method-mobile { display: block; }
-  .method-timeline, .method-detail-shell { display: none; }
+  .method-timeline { display: none; }
   .method-mobile-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(7px, 3vw, 16px); margin-bottom: 16px; }
   .method-mobile-step { min-width: 0; display: grid; justify-items: center; gap: 8px; }
   .method-mobile-step button { width: 46px; height: 46px; display: grid; place-items: center; padding: 0; color: #192e47; border: 1px solid #c9964a; border-radius: 50%; background: #f7f7f4; font-size: .7rem; font-weight: 800; font-variant-numeric: tabular-nums; cursor: pointer; transition: color .22s var(--ease), background-color .22s var(--ease), border-color .22s var(--ease), transform .22s var(--ease), box-shadow .22s var(--ease); }
@@ -717,7 +710,6 @@ p { color: #5e646b; line-height: 1.72; }
   .methodology .method-icon,
   .methodology .method-summary,
   .methodology .method-card-arrow,
-  .methodology .method-controls button,
   .methodology .method-progress span { transition: none; }
   .methodology .method-mobile-step button,
   .methodology .method-mobile-step > span,
