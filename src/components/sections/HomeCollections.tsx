@@ -1,12 +1,13 @@
 import { ArrowRight as PhosphorArrowRight } from '@phosphor-icons/react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { useState } from 'react'
-import { ArrowLeft, ArrowRight, ClipboardCheck, DraftingCompass, HardHat, MessageCircle } from 'lucide-react'
+import { ArrowLeft, ArrowRight, FileSearch, HardHat, MessagesSquare, PencilRuler } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import procesoDesarrollo from '@/assets/images/proceso-desarrollo.webp'
 import procesoEvaluacion from '@/assets/images/proceso-evaluacion.webp'
 import procesoNecesidad from '@/assets/images/proceso-necesidad.png'
 import procesoPropuesta from '@/assets/images/proceso-propuesta.webp'
+import procesoSeccionBg from '@/assets/images/proceso-seccion-bg.webp'
 import { projects } from '@/data/projects'
 import { properties } from '@/data/properties'
 import { ButtonLink, FallbackImage, Reveal, SectionHeading } from '@/components/ui'
@@ -28,7 +29,7 @@ const steps = [
     detailTitle: 'Todo comienza con tu idea.',
     detail: 'Conversamos sobre tus objetivos, el tipo de inmueble o espacio y tus expectativas para entender qué solución necesitas.',
     image: procesoNecesidad,
-    icon: MessageCircle,
+    icon: MessagesSquare,
   },
   {
     number: '02',
@@ -38,7 +39,7 @@ const steps = [
     detailTitle: 'Analizamos las necesidades del proyecto.',
     detail: 'Revisamos la información disponible, las condiciones del espacio y los requerimientos para identificar un enfoque adecuado.',
     image: procesoEvaluacion,
-    icon: ClipboardCheck,
+    icon: FileSearch,
   },
   {
     number: '03',
@@ -48,7 +49,7 @@ const steps = [
     detailTitle: 'Una solución clara y estructurada.',
     detail: 'Preparamos una propuesta que establece el alcance, los entregables y las condiciones correspondientes al servicio solicitado.',
     image: procesoPropuesta,
-    icon: DraftingCompass,
+    icon: PencilRuler,
   },
   {
     number: '04',
@@ -70,6 +71,7 @@ export function Methodology() {
   const move = (direction: number) => setActiveStep((current) => (current + direction + steps.length) % steps.length)
 
   return <section className="section methodology" aria-labelledby="methodology-title">
+    <img className="methodology-background" src={procesoSeccionBg} alt="" aria-hidden="true" loading="lazy" decoding="async" />
     <div className="container methodology-container">
       <Reveal className="methodology-header">
         <div className="methodology-heading">
@@ -117,7 +119,7 @@ export function Methodology() {
                 <span className="method-card-overlay" />
               </span>
               <div className="method-mobile-card-topline">
-                <span className="method-mobile-icon"><MobileIcon size={22} strokeWidth={1.8} aria-hidden="true" /></span>
+                <span className="method-mobile-icon"><MobileIcon size={24} strokeWidth={1.9} aria-hidden="true" /></span>
                 <span>Etapa {selectedStep.number} / 04</span>
               </div>
               <p className="method-mobile-label">{selectedStep.label}</p>
@@ -156,7 +158,7 @@ export function Methodology() {
                 <span className="method-card-overlay" />
               </span>
               <span className="method-step-number">{step.number}</span>
-              <span className="method-icon"><Icon size={23} strokeWidth={1.8} aria-hidden="true" /></span>
+              <span className="method-icon"><Icon size={26} strokeWidth={1.9} aria-hidden="true" /></span>
               <strong>{step.title}</strong>
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span

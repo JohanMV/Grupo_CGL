@@ -1,6 +1,5 @@
 import apartment from '@/assets/images/apartment-living.webp'
 import building from '@/assets/images/managed-building.webp'
-import commercial from '@/assets/images/commercial-space.webp'
 import construction from '@/assets/images/construction-site.webp'
 import hero from '@/assets/images/hero-residence.webp'
 import kitchen from '@/assets/images/renovated-kitchen.webp'
