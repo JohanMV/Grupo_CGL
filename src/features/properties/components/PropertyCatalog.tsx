@@ -4,6 +4,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { FallbackImage } from '@/components/ui'
 import { properties } from '@/data/properties'
 import type { Property } from '@/types/content'
+import { formatPrice, propertyHighlights } from '@/features/properties/propertyPresentation'
 
 const zones = ['Lima Norte', 'Lima Centro', 'Lima Este', 'Lima Sur', 'Callao'] as const
 const types = [...new Set(properties.map((property) => property.type))]
@@ -24,9 +25,10 @@ function PropertyCard({ property }: { property: Property }) {
       <small>{property.operation} · {property.type}</small>
       <h2><Link to={destination}>{property.title}</Link></h2>
       {location && <p className="catalog-card-location">{location}</p>}
-      {property.tags.length > 0 && <ul className="catalog-card-features" aria-label="Características">
-        {property.tags.slice(0, 3).map((tag) => <li key={tag}>{tag}</li>)}
-      </ul>}
+      <p className="catalog-card-price">{formatPrice(property)} <span>· muestra</span></p>
+      <ul className="catalog-card-features" aria-label="Características">
+        {propertyHighlights(property).map((fact) => <li key={fact.label}>{fact.value}</li>)}
+      </ul>
       <Link className="catalog-card-link" to={destination}>Ver propiedad <ArrowRight aria-hidden="true" /></Link>
     </div>
   </article>

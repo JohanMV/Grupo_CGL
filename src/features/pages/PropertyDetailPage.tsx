@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
-import { ArrowLeft, ArrowRight, CaretLeft, CaretRight, Check, MapPin, X } from '@phosphor-icons/react'
+import { ArrowLeft, ArrowRight, CaretLeft, CaretRight, MapPin, X } from '@phosphor-icons/react'
+import { Bath, BedDouble, CarFront, ExternalLink, Maximize2 } from 'lucide-react'
 import { Link, useParams } from 'react-router-dom'
 import { Breadcrumbs, ButtonLink, FallbackImage } from '@/components/ui'
 import { getProperty, properties } from '@/data/properties'
 import type { Property, PropertyPhoto } from '@/types/content'
+import { formatMoney, formatPrice, propertyContactUrl, propertyGoogleEmbedUrl, propertyGoogleMapsUrl, propertyHighlights } from '@/features/properties/propertyPresentation'
 import { NotFoundPage } from './NotFoundPage'
 
 type OpenPhoto = (index: number, trigger: HTMLButtonElement) => void
@@ -113,17 +115,95 @@ function relatedProperties(property: Property) {
     .map(({ item }) => item)
 }
 
+function PropertyTechnicalDetails({ property }: { property: Property }) {
+  const { features, amenities } = property
+  const dimensions = [
+    features.totalArea !== undefined && ['Área total', `${features.totalArea} m²`],
+    features.builtArea !== undefined && ['Área techada', `${features.builtArea} m²`],
+    features.landArea !== undefined && ['Área de terreno', `${features.landArea} m²`],
+    features.floor !== undefined && ['Piso', String(features.floor)],
+    features.levels !== undefined && ['Niveles', String(features.levels)],
+    features.ageYears !== undefined && ['Antigüedad', `${features.ageYears} años`],
+    features.condition && ['Conservación', features.condition],
+  ].filter((item): item is string[] => Boolean(item))
+  const rooms = [
+    ...(amenities?.distribution ?? []),
+    features.terrace && 'Terraza', features.balcony && 'Balcón',
+    features.patio && 'Patio', features.garden && 'Jardín',
+  ].filter((item): item is string => Boolean(item))
+  const equipment = [
+    ...(amenities?.equipment ?? []),
+    features.furnished !== undefined && (features.furnished ? 'Amoblado' : 'Sin amoblar'),
+    features.elevator && !amenities?.equipment?.some((item) => /ascensor/i.test(item)) && 'Ascensor',
+    features.storage && 'Depósito',
+    features.parking !== undefined && !amenities?.equipment?.some((item) => /estacionamiento/i.test(item)) && `${features.parking} estacionamiento${features.parking === 1 ? '' : 's'}`,
+  ].filter((item): item is string => Boolean(item))
+  const groups = [
+    { title: 'Ambientes', items: rooms },
+    { title: 'Equipamiento', items: equipment },
+    { title: 'Áreas comunes', items: amenities?.shared ?? [] },
+  ].filter((group) => group.items.length > 0)
+  return <section className="property-details" aria-labelledby="property-details-title"><div className="container">
+    <div className="property-details-intro">
+      <div><h2 id="property-details-title">Sobre esta propiedad</h2><p>{property.description}</p></div>
+      {property.tags.length > 0 && <ul className="property-details-tags">{property.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>}
+    </div>
+    <div className="property-specs">
+      {dimensions.length > 0 && <div className="property-specs-dimensions"><h3>Medidas y detalles</h3><dl>{dimensions.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl></div>}
+      {groups.map((group) => <div className="property-specs-list" key={group.title}><h3>{group.title}</h3><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></div>)}
+    </div>
+  </div></section>
+}
+
+function PropertyCommercialTerms({ property }: { property: Property }) {
+  const rows = [
+    property.price?.negotiable !== undefined && ['Precio negociable', property.price.negotiable ? 'Sí' : 'No'],
+    property.operation === 'Alquiler' && property.maintenance && ['Mantenimiento mensual', formatMoney(property.maintenance.amount, property.maintenance.currency)],
+    property.rentalTerms?.depositMonths !== undefined && ['Garantía', `${property.rentalTerms.depositMonths} meses`],
+    property.rentalTerms?.advanceMonths !== undefined && ['Adelanto', `${property.rentalTerms.advanceMonths} mes${property.rentalTerms.advanceMonths === 1 ? '' : 'es'}`],
+    property.rentalTerms?.minimumMonths !== undefined && ['Plazo mínimo', `${property.rentalTerms.minimumMonths} meses`],
+    property.features.petsAllowed !== undefined && ['Mascotas', property.features.petsAllowed ? 'Permitidas' : 'No permitidas'],
+    property.rentalTerms?.notes && ['Condiciones adicionales', property.rentalTerms.notes],
+  ].filter((item): item is string[] => Boolean(item))
+  if (rows.length === 0) return null
+  return <section className="property-commercial" aria-labelledby="property-commercial-title"><div className="container property-commercial-inner">
+    <div><h2 id="property-commercial-title">Condiciones de {property.operation === 'Alquiler' ? 'alquiler' : 'venta'}</h2><p>Detalles para considerar antes de solicitar información.</p></div>
+    <dl>{rows.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+  </div></section>
+}
+
+function PropertyLocation({ property }: { property: Property }) {
+  const [mapFailed, setMapFailed] = useState(false)
+  const mapUrl = propertyGoogleEmbedUrl(property)
+  const { location } = property
+  return <section className="container property-location" aria-labelledby="property-location-title">
+    <div className="property-location-copy">
+      <h2 id="property-location-title">Ubicación y entorno</h2>
+      <p className="property-location-name"><MapPin size={23} aria-hidden="true" />{location.district}, {location.province}</p>
+      <p className="property-location-explanation">{location.precision === 'aproximada' ? 'El mapa muestra el distrito como referencia; no señala la dirección exacta del inmueble.' : location.address ?? 'Ubicación exacta confirmada.'}</p>
+      {location.nearby && location.nearby.length > 0 && <div className="property-location-nearby"><h3>Lugares cercanos</h3><ul>{location.nearby.map((place) => <li key={place.name}><strong>{place.name}</strong><span>{place.category}{place.distanceMeters !== undefined ? ` · ${place.distanceMeters} m` : ''}</span></li>)}</ul></div>}
+      <a className="property-map-link" href={propertyGoogleMapsUrl(property)} target="_blank" rel="noopener noreferrer">Ver en Google Maps <ExternalLink size={17} aria-hidden="true" /></a>
+    </div>
+    <div className="property-map-frame">
+      {!mapFailed ? <iframe src={mapUrl} title={`Google Maps: ubicación ${location.precision} en ${location.district}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen onError={() => setMapFailed(true)} /> : <div className="property-map-fallback"><MapPin size={28} aria-hidden="true" /><p>El mapa no está disponible en este momento.</p><a href={propertyGoogleMapsUrl(property)} target="_blank" rel="noopener noreferrer">Abrir ubicación en Google Maps</a></div>}
+      <p>Ubicación {location.precision} · Mapa de Google Maps</p>
+    </div>
+  </section>
+}
+
 function PropertyDetailContent({ property }: { property: Property }) {
   const photos = [...(property.photos ?? [])].sort((a, b) => a.order - b.order)
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const [returnFocus, setReturnFocus] = useState<HTMLButtonElement | null>(null)
   const openPhoto: OpenPhoto = (index, trigger) => { setReturnFocus(trigger); setLightboxIndex(index) }
-  const location = [property.district, property.catalogZone ?? property.zone].filter(Boolean).join(', ')
-  const contactUrl = `/contacto?servicio=inmobiliaria&propiedad=${encodeURIComponent(property.slug)}`
+  const location = [property.location.district, property.location.province].filter(Boolean).join(', ')
+  const contactUrl = propertyContactUrl(property)
+  const highlights = propertyHighlights(property)
+  const highlightIcons = { Área: Maximize2, Dormitorios: BedDouble, Baños: Bath, 'Servicios higiénicos': Bath, Estacionamientos: CarFront }
 
   return <div className="property-detail-page">
     <section className="property-detail-hero">
-      <FallbackImage src={property.image} alt="" className="property-detail-hero-image" loading="eager" />
+      <FallbackImage src={photos[0]?.src ?? property.image} alt={photos[0]?.alt ?? property.title} className="property-detail-hero-image" loading="eager" />
       <div className="property-detail-hero-overlay" aria-hidden="true" />
       <div className="container property-detail-hero-content">
         <Breadcrumbs light items={[{ label: 'Inicio', to: '/' }, { label: 'Propiedades', to: '/propiedades' }, { label: property.title }]} />
@@ -134,32 +214,22 @@ function PropertyDetailContent({ property }: { property: Property }) {
 
     <PropertyGallery photos={photos} onOpen={openPhoto} />
 
-    <section className="property-facts" aria-label="Resumen de la propiedad">
-      <dl className="container">
-        <div><dt>Operación</dt><dd>{property.operation}</dd></div>
-        <div><dt>Tipo</dt><dd>{property.type}</dd></div>
-        {property.district && <div><dt>Distrito</dt><dd>{property.district}</dd></div>}
-        <div><dt>Zona</dt><dd>{property.catalogZone ?? property.zone}</dd></div>
-      </dl>
-    </section>
+    <section className="property-summary" aria-label="Resumen comercial"><div className="container property-summary-inner">
+      <div className="property-summary-main">
+        <h2>{formatPrice(property)}</h2>
+        {property.maintenance && <p className="property-summary-maintenance">Mantenimiento: {formatMoney(property.maintenance.amount, property.maintenance.currency)} / mes</p>}
+        <p className="property-summary-description">{property.summary}</p>
+      </div>
+      <div className="property-summary-action"><p>¿Quieres conocer más sobre este inmueble?</p><ButtonLink to={contactUrl}>Solicitar información</ButtonLink></div>
+      <ul className="property-summary-highlights">{highlights.map((item) => { const Icon = highlightIcons[item.label as keyof typeof highlightIcons]; return <li key={item.label}><Icon size={22} strokeWidth={1.6} aria-hidden="true" /><span><strong>{item.value}</strong><small>{item.label}</small></span></li> })}</ul>
+      <p className="property-demo-note">Ficha conceptual {property.code} · Datos de muestra, no oferta vigente · Actualizada el {new Intl.DateTimeFormat('es-PE', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${property.updatedAt}T12:00:00`))}</p>
+    </div></section>
 
     <EnvironmentExplorer photos={photos} onOpen={openPhoto} />
 
-    <section className="container property-information" aria-label="Descripción y características">
-      <div className="property-information-story">
-        <h2>Sobre esta propiedad</h2>
-        <p>{property.description}</p>
-        {property.spaces && property.spaces.length > 0 && <div className="property-information-spaces"><h3>Ambientes y distribución</h3><ul>{property.spaces.map((space) => <li key={space}>{space}</li>)}</ul></div>}
-      </div>
-      <div className="property-information-features">
-        <h2>Características</h2>
-        <ul>{property.tags.map((tag) => <li key={tag}><Check size={18} aria-hidden="true" />{tag}</li>)}</ul>
-      </div>
-    </section>
-
-    <section className="container property-location" aria-labelledby="property-location-title">
-      <div><h2 id="property-location-title">Ubicación</h2><p><MapPin size={22} aria-hidden="true" />{location}</p></div>
-    </section>
+    <PropertyTechnicalDetails property={property} />
+    <PropertyCommercialTerms property={property} />
+    <PropertyLocation property={property} />
 
     <section className="property-contact-band" aria-labelledby="property-contact-title"><div className="container">
       <div><h2 id="property-contact-title">¿Te interesa esta propiedad?</h2><p>Solicita orientación sobre esta propuesta y nuestros servicios inmobiliarios.</p></div>
@@ -170,7 +240,7 @@ function PropertyDetailContent({ property }: { property: Property }) {
       <div className="property-related-heading"><h2 id="property-related-title">Propiedades relacionadas</h2><Link to="/propiedades">Ver todas las propiedades <ArrowRight size={18} aria-hidden="true" /></Link></div>
       <div className="property-related-grid">{relatedProperties(property).map((item) => <Link key={item.slug} to={`/propiedades/${item.slug}`} className="property-related-card">
         <FallbackImage src={item.image} alt="" />
-        <div><small>{item.operation} · {item.type} · {item.district ?? item.zone}</small><h3>{item.title}</h3><span>Ver propiedad <ArrowRight size={17} aria-hidden="true" /></span></div>
+        <div><small>{item.operation} · {item.type} · {item.district ?? item.zone}</small><h3>{item.title}</h3><strong className="property-related-price">{formatPrice(item)}</strong><p>{propertyHighlights(item).map((fact) => fact.value).join(' · ')}</p><span>Ver propiedad <ArrowRight size={17} aria-hidden="true" /></span></div>
       </Link>)}</div>
     </div></section>
 

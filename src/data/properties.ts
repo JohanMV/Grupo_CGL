@@ -27,6 +27,12 @@ import type { Property } from '@/types/content'
 export const properties: Property[] = [
   {
     slug: 'departamento-con-terraza', title: 'Departamento con terraza urbana', operation: 'Venta', type: 'Departamento', zone: 'Lima Moderna', catalogZone: 'Lima Centro', district: 'Miraflores', image: apartment,
+    id: 'cgl-demo-001', code: 'CGL-P001', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    summary: 'Departamento de dos dormitorios con terraza conectada al área social y ambientes de luz natural.',
+    price: { amount: 750000, currency: 'PEN' }, maintenance: { amount: 420, currency: 'PEN' },
+    features: { totalArea: 112, builtArea: 95, bedrooms: 2, fullBathrooms: 2, parking: 1, floor: 7, terrace: true, elevator: true },
+    amenities: { distribution: ['Sala y comedor integrados', 'Cocina', 'Lavandería'], equipment: ['Ascensor', 'Un estacionamiento'], shared: ['Lobby'] },
+    location: { department: 'Lima', province: 'Lima', district: 'Miraflores', sector: 'Distrito de Miraflores', reference: 'Referencia distrital, sin dirección de inmueble confirmada', latitude: -12.1175, longitude: -77.04306, precision: 'aproximada' },
     photos: [
       { id: 'sala', src: apartment, alt: 'Sala luminosa con acceso a terraza', category: 'Sala y comedor', label: 'Sala y terraza', isReference: true, order: 1 },
       { id: 'cocina', src: terrazaCocina, alt: 'Cocina luminosa con mobiliario de roble y vista a la terraza', category: 'Cocina', label: 'Cocina', isReference: true, order: 2 },
@@ -37,6 +43,12 @@ export const properties: Property[] = [
   },
   {
     slug: 'residencia-con-jardin', title: 'Residencia contemporánea con jardín', operation: 'Venta', type: 'Casa', zone: 'Lima Top', catalogZone: 'Lima Centro', district: 'San Isidro', image: hero,
+    id: 'cgl-demo-002', code: 'CGL-P002', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    summary: 'Casa contemporánea de cuatro dormitorios con jardín y ambientes sociales abiertos al exterior.',
+    price: { amount: 620000, currency: 'USD' },
+    features: { totalArea: 290, landArea: 260, builtArea: 290, bedrooms: 4, fullBathrooms: 3, halfBathrooms: 1, parking: 2, levels: 2, garden: true, terrace: true },
+    amenities: { distribution: ['Sala y comedor', 'Cocina'], equipment: ['Dos estacionamientos'] },
+    location: { department: 'Lima', province: 'Lima', district: 'San Isidro', sector: 'Distrito de San Isidro', reference: 'Referencia distrital, sin dirección de inmueble confirmada', latitude: -12.09917, longitude: -77.03472, precision: 'aproximada' },
     photos: [
       { id: 'exterior', src: hero, alt: 'Exterior de residencia contemporánea al atardecer', category: 'Exterior', label: 'Arquitectura exterior', isReference: true, order: 1 },
       { id: 'sala', src: residenciaSala, alt: 'Sala amplia de concreto y madera abierta al jardín', category: 'Sala y comedor', label: 'Sala', isReference: true, order: 2 },
@@ -47,6 +59,13 @@ export const properties: Property[] = [
   },
   {
     slug: 'oficina-representativa', title: 'Oficina de imagen representativa', operation: 'Alquiler', type: 'Oficina', zone: 'Lima Top', catalogZone: 'Lima Centro', district: 'San Isidro', image: officeRepresentativeOne,
+    id: 'cgl-demo-003', code: 'CGL-P003', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    summary: 'Oficina con recepción, áreas de trabajo y salas de reunión configurables para un equipo profesional.',
+    price: { amount: 1900, currency: 'USD', period: 'mes' }, maintenance: { amount: 330, currency: 'USD' },
+    rentalTerms: { depositMonths: 2, advanceMonths: 1, minimumMonths: 12 },
+    features: { totalArea: 145, builtArea: 145, fullBathrooms: 2, parking: 2, floor: 8, elevator: true },
+    amenities: { distribution: ['Recepción', 'Área colaborativa', 'Sala de reuniones', 'Despacho privado'], equipment: ['Ascensor', 'Dos estacionamientos'], shared: ['Lobby'] },
+    location: { department: 'Lima', province: 'Lima', district: 'San Isidro', sector: 'Distrito de San Isidro', reference: 'Referencia distrital, sin dirección de inmueble confirmada', latitude: -12.09917, longitude: -77.03472, precision: 'aproximada' },
     photos: [
       { id: 'recepcion', src: officeRepresentativeOne, alt: 'Recepción y sala de espera de oficina representativa', category: 'Recepción', label: 'Recepción', isReference: true, order: 1 },
       { id: 'trabajo', src: officeRepresentativeThree, alt: 'Espacio colaborativo de la oficina representativa', category: 'Áreas de trabajo', label: 'Espacio colaborativo', isReference: true, order: 2 },
@@ -57,6 +76,13 @@ export const properties: Property[] = [
   },
   {
     slug: 'departamento-calido', title: 'Departamento de materialidad cálida', operation: 'Alquiler', type: 'Departamento', zone: 'Lima Moderna', catalogZone: 'Lima Este', district: 'La Molina', image: kitchen,
+    id: 'cgl-demo-004', code: 'CGL-P004', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    summary: 'Departamento de dos dormitorios con cocina integrada, balcón y almacenamiento interior.',
+    price: { amount: 3200, currency: 'PEN', period: 'mes' }, maintenance: { amount: 350, currency: 'PEN' },
+    rentalTerms: { depositMonths: 2, advanceMonths: 1, minimumMonths: 12 },
+    features: { totalArea: 86, builtArea: 81, bedrooms: 2, fullBathrooms: 2, parking: 1, floor: 3, balcony: true, elevator: true },
+    amenities: { distribution: ['Sala y comedor', 'Cocina integrada', 'Lavandería'], equipment: ['Armarios', 'Ascensor', 'Un estacionamiento'] },
+    location: { department: 'Lima', province: 'Lima', district: 'La Molina', sector: 'Distrito de La Molina', reference: 'Referencia distrital, sin dirección de inmueble confirmada', latitude: -12.0875, longitude: -76.93389, precision: 'aproximada' },
     photos: [
       { id: 'cocina', src: kitchen, alt: 'Cocina integrada y acabados cálidos', category: 'Cocina', label: 'Cocina integrada', isReference: true, order: 1 },
       { id: 'sala', src: calidoSala, alt: 'Sala de materialidad cálida con balcón y luz natural', category: 'Sala y comedor', label: 'Sala', isReference: true, order: 2 },
@@ -67,6 +93,13 @@ export const properties: Property[] = [
   },
   {
     slug: 'oficina-flexible', title: 'Oficina flexible para equipos', operation: 'Alquiler', type: 'Oficina', zone: 'Otras zonas', catalogZone: 'Callao', district: 'Bellavista', image: officeFlexibleOne,
+    id: 'cgl-demo-005', code: 'CGL-P005', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    summary: 'Oficina adaptable con áreas de concentración, colaboración, recepción y reuniones.',
+    price: { amount: 4800, currency: 'PEN', period: 'mes' }, maintenance: { amount: 550, currency: 'PEN' },
+    rentalTerms: { depositMonths: 2, advanceMonths: 1, minimumMonths: 12 },
+    features: { totalArea: 175, builtArea: 175, fullBathrooms: 2, parking: 2, floor: 4, elevator: true },
+    amenities: { distribution: ['Área de trabajo', 'Zona de concentración', 'Sala de reuniones', 'Recepción'], equipment: ['Ascensor', 'Dos estacionamientos'] },
+    location: { department: 'Callao', province: 'Provincia Constitucional del Callao', district: 'Bellavista', sector: 'Distrito de Bellavista', reference: 'Referencia distrital, sin dirección de inmueble confirmada', latitude: -12.0625, longitude: -77.12861, precision: 'aproximada' },
     photos: [
       { id: 'trabajo', src: officeFlexibleOne, alt: 'Área de trabajo abierta de la oficina flexible', category: 'Áreas de trabajo', label: 'Trabajo compartido', isReference: true, order: 1 },
       { id: 'reuniones', src: officeFlexibleTwo, alt: 'Sala de reuniones de la oficina flexible', category: 'Salas de reuniones', label: 'Reuniones', isReference: true, order: 2 },
@@ -77,13 +110,19 @@ export const properties: Property[] = [
   },
   {
     slug: 'casa-urbana', title: 'Casa urbana de líneas limpias', operation: 'Venta', type: 'Casa', zone: 'Otras zonas', catalogZone: 'Lima Sur', district: 'Chorrillos', image: urbanaFachada,
+    id: 'cgl-demo-006', code: 'CGL-P006', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    summary: 'Casa de tres dormitorios con áreas sociales luminosas, terraza y jardín privado.',
+    price: { amount: 280000, currency: 'USD' },
+    features: { totalArea: 190, landArea: 160, builtArea: 190, bedrooms: 3, fullBathrooms: 3, parking: 1, levels: 2, garden: true, terrace: true },
+    amenities: { distribution: ['Sala y comedor', 'Cocina'], equipment: ['Un estacionamiento'] },
+    location: { department: 'Lima', province: 'Lima', district: 'Chorrillos', sector: 'Distrito de Chorrillos', reference: 'Referencia distrital, sin dirección de inmueble confirmada', latitude: -12.1692, longitude: -77.0244, precision: 'aproximada' },
     photos: [
       { id: 'fachada', src: urbanaFachada, alt: 'Fachada de casa urbana de concreto y madera', category: 'Fachada', label: 'Fachada', isReference: true, order: 1 },
       { id: 'sala', src: urbanaSala, alt: 'Sala luminosa con vista al jardín de la casa urbana', category: 'Sala y comedor', label: 'Sala', isReference: true, order: 2 },
       { id: 'cocina', src: urbanaCocina, alt: 'Cocina contemporánea de la casa urbana', category: 'Cocina', label: 'Cocina', isReference: true, order: 3 },
       { id: 'jardin', src: urbanaJardin, alt: 'Jardín privado y terraza de la casa urbana', category: 'Jardín', label: 'Jardín y terraza', isReference: true, order: 4 },
     ],
-    spaces: ['Acceso', 'Áreas comunes', 'Áreas verdes'], tags: ['Fachada contemporánea', 'Áreas comunes', 'Paisajismo'], description: 'Vivienda urbana con arquitectura contemporánea, acceso claro y áreas verdes integradas.',
+    spaces: ['Acceso', 'Áreas sociales', 'Jardín privado'], tags: ['Fachada contemporánea', 'Áreas sociales', 'Paisajismo'], description: 'Vivienda urbana con arquitectura contemporánea, acceso claro y áreas verdes integradas.',
   },
 ]
 
