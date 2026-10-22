@@ -25,7 +25,7 @@ function PropertyCard({ property }: { property: Property }) {
       <small>{property.operation} · {property.type}</small>
       <h2><Link to={destination}>{property.title}</Link></h2>
       {location && <p className="catalog-card-location">{location}</p>}
-      <p className="catalog-card-price">{formatPrice(property)} <span>· muestra</span></p>
+      <p className="catalog-card-price">{formatPrice(property)}</p>
       <ul className="catalog-card-features" aria-label="Características">
         {propertyHighlights(property).map((fact) => <li key={fact.label}>{fact.value}</li>)}
       </ul>
@@ -79,6 +79,5 @@ export function PropertyCatalog() {
     {filtered.length > 0
       ? <div className="catalog-grid">{filtered.map((property) => <PropertyCard property={property} key={property.slug} />)}</div>
       : <div className="catalog-empty"><h2>No encontramos propiedades con esos filtros.</h2><p>Prueba con otra combinación o vuelve a ver el catálogo completo.</p><button type="button" onClick={reset}>Limpiar filtros <ArrowRight size={18} aria-hidden="true" /></button></div>}
-    <p className="catalog-disclosure">Catálogo demostrativo: inmuebles de ejemplo, no ofertas verificadas de Grupo CGL.</p>
   </>
 }

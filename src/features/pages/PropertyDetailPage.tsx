@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { ArrowLeft, ArrowRight, CaretLeft, CaretRight, MapPin, X } from '@phosphor-icons/react'
-import { Bath, BedDouble, CarFront, ExternalLink, Maximize2 } from 'lucide-react'
+import { Armchair, Bath, BedDouble, CarFront, CircleCheck, ClipboardList, ExternalLink, House, LayoutGrid, Maximize2, Sprout, Sun } from 'lucide-react'
 import { Link, useParams } from 'react-router-dom'
 import { Breadcrumbs, ButtonLink, FallbackImage } from '@/components/ui'
 import { getProperty, properties } from '@/data/properties'
@@ -95,10 +95,12 @@ function EnvironmentExplorer({ photos, onOpen }: { photos: PropertyPhoto[]; onOp
 
   return <section className="property-explorer" aria-labelledby="property-explorer-title">
     <div className="container">
-      <div className="property-explorer-heading"><h2 id="property-explorer-title">Explora cada espacio</h2><p>Recorre los ambientes y sus detalles.</p></div>
-      {categories.length > 2 && <div className="property-explorer-filters" role="group" aria-label="Filtrar ambientes">
-        {categories.map((item) => <button key={item} type="button" aria-pressed={category === item} onClick={() => setCategory(item)}>{item}</button>)}
-      </div>}
+      <div className="property-explorer-toolbar">
+        <div className="property-explorer-heading"><h2 id="property-explorer-title">Explora cada espacio</h2><p>Recorre los ambientes y sus detalles.</p></div>
+        {categories.length > 2 && <div className="property-explorer-filters" role="group" aria-label="Filtrar ambientes">
+          {categories.map((item) => <button key={item} type="button" aria-pressed={category === item} onClick={() => setCategory(item)}>{item}</button>)}
+        </div>}
+      </div>
       <div className="property-explorer-grid" aria-live="polite">
         {visible.map((photo) => <PhotoTile key={photo.id} photo={photo} index={photos.findIndex((item) => item.id === photo.id)} onOpen={onOpen} />)}
       </div>
@@ -117,17 +119,21 @@ function relatedProperties(property: Property) {
 
 function PropertyTechnicalDetails({ property }: { property: Property }) {
   const { features, amenities } = property
-  const dimensions = [
-    features.totalArea !== undefined && ['Área total', `${features.totalArea} m²`],
-    features.builtArea !== undefined && ['Área techada', `${features.builtArea} m²`],
-    features.landArea !== undefined && ['Área de terreno', `${features.landArea} m²`],
-    features.floor !== undefined && ['Piso', String(features.floor)],
-    features.levels !== undefined && ['Niveles', String(features.levels)],
-    features.ageYears !== undefined && ['Antigüedad', `${features.ageYears} años`],
-    features.condition && ['Conservación', features.condition],
-  ].filter((item): item is string[] => Boolean(item))
+  const details = [
+    features.totalArea !== undefined && `${features.totalArea} m² de área total`,
+    features.landArea !== undefined && `${features.landArea} m² de terreno`,
+    features.builtArea !== undefined && `${features.builtArea} m² techados`,
+    features.floor !== undefined && `Piso ${features.floor}`,
+    features.levels !== undefined && `${features.levels} nivel${features.levels === 1 ? '' : 'es'}`,
+    features.ageYears !== undefined && `${features.ageYears} años de antigüedad`,
+    features.condition && `Conservación: ${features.condition}`,
+    features.frontage !== undefined && `${features.frontage} m de frente`,
+    features.depth !== undefined && `${features.depth} m de fondo`,
+    features.zoning && `Zonificación ${features.zoning}`,
+  ].filter((item): item is string => Boolean(item))
   const rooms = [
     ...(amenities?.distribution ?? []),
+    features.bedrooms !== undefined && `${features.bedrooms} dormitorio${features.bedrooms === 1 ? '' : 's'}`,
     features.terrace && 'Terraza', features.balcony && 'Balcón',
     features.patio && 'Patio', features.garden && 'Jardín',
   ].filter((item): item is string => Boolean(item))
@@ -138,19 +144,27 @@ function PropertyTechnicalDetails({ property }: { property: Property }) {
     features.storage && 'Depósito',
     features.parking !== undefined && !amenities?.equipment?.some((item) => /estacionamiento/i.test(item)) && `${features.parking} estacionamiento${features.parking === 1 ? '' : 's'}`,
   ].filter((item): item is string => Boolean(item))
-  const groups = [
-    { title: 'Ambientes', items: rooms },
-    { title: 'Equipamiento', items: equipment },
-    { title: 'Áreas comunes', items: amenities?.shared ?? [] },
-  ].filter((group) => group.items.length > 0)
+  const equipmentAndShared = [
+    ...equipment,
+    ...(amenities?.shared ?? []),
+  ]
+  const tagIcon = (tag: string) => {
+    if (/luz|ilumin/i.test(tag)) return Sun
+    if (/terraza|jardín|paisajismo|patio|balcón/i.test(tag)) return Sprout
+    if (/distribución|espacios|áreas|colaboración|salas/i.test(tag)) return LayoutGrid
+    return CircleCheck
+  }
   return <section className="property-details" aria-labelledby="property-details-title"><div className="container">
-    <div className="property-details-intro">
-      <div><h2 id="property-details-title">Sobre esta propiedad</h2><p>{property.description}</p></div>
-      {property.tags.length > 0 && <ul className="property-details-tags">{property.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>}
-    </div>
-    <div className="property-specs">
-      {dimensions.length > 0 && <div className="property-specs-dimensions"><h3>Medidas y detalles</h3><dl>{dimensions.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl></div>}
-      {groups.map((group) => <div className="property-specs-list" key={group.title}><h3>{group.title}</h3><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></div>)}
+    <div className="property-details-panel">
+      <div className="property-details-intro">
+        <div><h2 id="property-details-title">Sobre esta propiedad</h2><p>{property.description}</p></div>
+        {property.tags.length > 0 && <ul className="property-details-tags">{property.tags.map((tag) => { const Icon = tagIcon(tag); return <li key={tag}><Icon size={20} strokeWidth={1.8} aria-hidden="true" />{tag}</li> })}</ul>}
+      </div>
+      <div className="property-specs">
+        {details.length > 0 && <div className="property-spec-card property-specs-list"><ClipboardList size={30} strokeWidth={1.7} aria-hidden="true" /><div><h3>Detalles</h3><ul>{details.map((item) => <li key={item}>{item}</li>)}</ul></div></div>}
+        {rooms.length > 0 && <div className="property-spec-card property-specs-list"><House size={31} strokeWidth={1.7} aria-hidden="true" /><div><h3>Ambientes</h3><ul>{rooms.map((item) => <li key={item}>{item}</li>)}</ul></div></div>}
+        {equipmentAndShared.length > 0 && <div className="property-spec-card property-specs-list"><Armchair size={31} strokeWidth={1.7} aria-hidden="true" /><div><h3>Equipamiento</h3><ul>{equipmentAndShared.map((item) => <li key={item}>{item}</li>)}</ul></div></div>}
+      </div>
     </div>
   </div></section>
 }
@@ -216,13 +230,23 @@ function PropertyDetailContent({ property }: { property: Property }) {
 
     <section className="property-summary" aria-label="Resumen comercial"><div className="container property-summary-inner">
       <div className="property-summary-main">
+        <span className="property-summary-status">{property.operation === 'Venta' ? 'EN VENTA' : 'EN ALQUILER'}</span>
         <h2>{formatPrice(property)}</h2>
         {property.maintenance && <p className="property-summary-maintenance">Mantenimiento: {formatMoney(property.maintenance.amount, property.maintenance.currency)} / mes</p>}
         <p className="property-summary-description">{property.summary}</p>
       </div>
-      <div className="property-summary-action"><p>¿Quieres conocer más sobre este inmueble?</p><ButtonLink to={contactUrl}>Solicitar información</ButtonLink></div>
+      <aside className="property-summary-action" aria-label="Consulta sobre la propiedad">
+        <h3>¿Deseas visitar o consultar esta propiedad?</h3>
+        <p>Nuestro equipo te ayudará a resolver tus dudas sobre este inmueble.</p>
+        <ButtonLink to={contactUrl}>Consultar esta propiedad</ButtonLink>
+        <ul>
+          <li><CircleCheck size={18} aria-hidden="true" />Asesoría personalizada</li>
+          <li><CircleCheck size={18} aria-hidden="true" />Información del inmueble centralizada</li>
+          <li><CircleCheck size={18} aria-hidden="true" />Atención mediante WhatsApp</li>
+        </ul>
+      </aside>
       <ul className="property-summary-highlights">{highlights.map((item) => { const Icon = highlightIcons[item.label as keyof typeof highlightIcons]; return <li key={item.label}><Icon size={22} strokeWidth={1.6} aria-hidden="true" /><span><strong>{item.value}</strong><small>{item.label}</small></span></li> })}</ul>
-      <p className="property-demo-note">Ficha conceptual {property.code} · Datos de muestra, no oferta vigente · Actualizada el {new Intl.DateTimeFormat('es-PE', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${property.updatedAt}T12:00:00`))}</p>
+      <p className="property-record-note">Código {property.code} · Información actualizada el {new Intl.DateTimeFormat('es-PE', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${property.updatedAt}T12:00:00`))}</p>
     </div></section>
 
     <EnvironmentExplorer photos={photos} onOpen={openPhoto} />
@@ -232,8 +256,8 @@ function PropertyDetailContent({ property }: { property: Property }) {
     <PropertyLocation property={property} />
 
     <section className="property-contact-band" aria-labelledby="property-contact-title"><div className="container">
-      <div><h2 id="property-contact-title">¿Te interesa esta propiedad?</h2><p>Solicita orientación sobre esta propuesta y nuestros servicios inmobiliarios.</p></div>
-      <ButtonLink to={contactUrl} variant="light">Solicitar información</ButtonLink>
+      <div><h2 id="property-contact-title">Conversa con un asesor inmobiliario</h2><p>Cuéntanos qué necesitas y te orientaremos sobre esta propiedad.</p></div>
+      <ButtonLink to={contactUrl} variant="light">Hablar con un asesor</ButtonLink>
     </div></section>
 
     <section className="property-related" aria-labelledby="property-related-title"><div className="container">

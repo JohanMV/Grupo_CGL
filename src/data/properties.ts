@@ -27,7 +27,7 @@ import type { Property } from '@/types/content'
 export const properties: Property[] = [
   {
     slug: 'departamento-con-terraza', title: 'Departamento con terraza urbana', operation: 'Venta', type: 'Departamento', zone: 'Lima Moderna', catalogZone: 'Lima Centro', district: 'Miraflores', image: apartment,
-    id: 'cgl-demo-001', code: 'CGL-P001', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    id: 'cgl-prop-001', code: 'CGL-P001', commercialStatus: 'Consultar disponibilidad', updatedAt: '2026-10-22',
     summary: 'Departamento de dos dormitorios con terraza conectada al área social y ambientes de luz natural.',
     price: { amount: 750000, currency: 'PEN' }, maintenance: { amount: 420, currency: 'PEN' },
     features: { totalArea: 112, builtArea: 95, bedrooms: 2, fullBathrooms: 2, parking: 1, floor: 7, terrace: true, elevator: true },
@@ -43,7 +43,7 @@ export const properties: Property[] = [
   },
   {
     slug: 'residencia-con-jardin', title: 'Residencia contemporánea con jardín', operation: 'Venta', type: 'Casa', zone: 'Lima Top', catalogZone: 'Lima Centro', district: 'San Isidro', image: hero,
-    id: 'cgl-demo-002', code: 'CGL-P002', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    id: 'cgl-prop-002', code: 'CGL-P002', commercialStatus: 'Consultar disponibilidad', updatedAt: '2026-10-22',
     summary: 'Casa contemporánea de cuatro dormitorios con jardín y ambientes sociales abiertos al exterior.',
     price: { amount: 620000, currency: 'USD' },
     features: { totalArea: 290, landArea: 260, builtArea: 290, bedrooms: 4, fullBathrooms: 3, halfBathrooms: 1, parking: 2, levels: 2, garden: true, terrace: true },
@@ -59,7 +59,7 @@ export const properties: Property[] = [
   },
   {
     slug: 'oficina-representativa', title: 'Oficina de imagen representativa', operation: 'Alquiler', type: 'Oficina', zone: 'Lima Top', catalogZone: 'Lima Centro', district: 'San Isidro', image: officeRepresentativeOne,
-    id: 'cgl-demo-003', code: 'CGL-P003', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    id: 'cgl-prop-003', code: 'CGL-P003', commercialStatus: 'Consultar disponibilidad', updatedAt: '2026-10-22',
     summary: 'Oficina con recepción, áreas de trabajo y salas de reunión configurables para un equipo profesional.',
     price: { amount: 1900, currency: 'USD', period: 'mes' }, maintenance: { amount: 330, currency: 'USD' },
     rentalTerms: { depositMonths: 2, advanceMonths: 1, minimumMonths: 12 },
@@ -76,7 +76,7 @@ export const properties: Property[] = [
   },
   {
     slug: 'departamento-calido', title: 'Departamento de materialidad cálida', operation: 'Alquiler', type: 'Departamento', zone: 'Lima Moderna', catalogZone: 'Lima Este', district: 'La Molina', image: kitchen,
-    id: 'cgl-demo-004', code: 'CGL-P004', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    id: 'cgl-prop-004', code: 'CGL-P004', commercialStatus: 'Consultar disponibilidad', updatedAt: '2026-10-22',
     summary: 'Departamento de dos dormitorios con cocina integrada, balcón y almacenamiento interior.',
     price: { amount: 3200, currency: 'PEN', period: 'mes' }, maintenance: { amount: 350, currency: 'PEN' },
     rentalTerms: { depositMonths: 2, advanceMonths: 1, minimumMonths: 12 },
@@ -93,7 +93,7 @@ export const properties: Property[] = [
   },
   {
     slug: 'oficina-flexible', title: 'Oficina flexible para equipos', operation: 'Alquiler', type: 'Oficina', zone: 'Otras zonas', catalogZone: 'Callao', district: 'Bellavista', image: officeFlexibleOne,
-    id: 'cgl-demo-005', code: 'CGL-P005', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    id: 'cgl-prop-005', code: 'CGL-P005', commercialStatus: 'Consultar disponibilidad', updatedAt: '2026-10-22',
     summary: 'Oficina adaptable con áreas de concentración, colaboración, recepción y reuniones.',
     price: { amount: 4800, currency: 'PEN', period: 'mes' }, maintenance: { amount: 550, currency: 'PEN' },
     rentalTerms: { depositMonths: 2, advanceMonths: 1, minimumMonths: 12 },
@@ -110,7 +110,7 @@ export const properties: Property[] = [
   },
   {
     slug: 'casa-urbana', title: 'Casa urbana de líneas limpias', operation: 'Venta', type: 'Casa', zone: 'Otras zonas', catalogZone: 'Lima Sur', district: 'Chorrillos', image: urbanaFachada,
-    id: 'cgl-demo-006', code: 'CGL-P006', commercialStatus: 'Muestra conceptual', isDemo: true, updatedAt: '2026-10-22',
+    id: 'cgl-prop-006', code: 'CGL-P006', commercialStatus: 'Consultar disponibilidad', updatedAt: '2026-10-22',
     summary: 'Casa de tres dormitorios con áreas sociales luminosas, terraza y jardín privado.',
     price: { amount: 280000, currency: 'USD' },
     features: { totalArea: 190, landArea: 160, builtArea: 190, bedrooms: 3, fullBathrooms: 3, parking: 1, levels: 2, garden: true, terrace: true },

@@ -19,10 +19,16 @@ export interface Project {
   title: string
   category: 'Construcción' | 'Remodelación' | 'Espacios comerciales'
   summary: string
+  overviewLead?: string
+  description: string
+  location: string
+  projectType: string
+  status: string
+  year: string
   image: string
   banner?: string
   gallery: string[]
-  scope: string[]
+  scope: Array<{ title: string; description: string }>
 }
 
 export interface Property {
@@ -32,8 +38,7 @@ export interface Property {
   title: string
   operation: 'Venta' | 'Alquiler'
   type: 'Departamento' | 'Casa' | 'Oficina' | 'Local comercial' | 'Terreno'
-  commercialStatus: 'Muestra conceptual' | 'Disponible' | 'Reservado' | 'Vendido' | 'Alquilado'
-  isDemo: boolean
+  commercialStatus: 'Consultar disponibilidad' | 'Disponible' | 'Reservado' | 'Vendido' | 'Alquilado'
   updatedAt: string
   summary: string
   price?: { amount: number; currency: 'PEN' | 'USD'; period?: 'mes' | 'semana' | 'día'; negotiable?: boolean }
