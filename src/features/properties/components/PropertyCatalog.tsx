@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { ArrowRight, MagnifyingGlass, X } from '@phosphor-icons/react'
+import { ArrowRight, ArrowsOut, Bathtub, Bed, Car, MagnifyingGlass, MapPin, X } from '@phosphor-icons/react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { FallbackImage } from '@/components/ui'
 import { properties } from '@/data/properties'
@@ -13,24 +13,36 @@ function normalized(value: string) {
   return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es').trim()
 }
 
+function PropertyFeatureIcon({ label }: { label: string }) {
+  if (label === 'Área') return <ArrowsOut size={19} weight="regular" aria-hidden="true" />
+  if (label === 'Dormitorios') return <Bed size={19} weight="regular" aria-hidden="true" />
+  if (label === 'Baños' || label === 'Servicios higiénicos') return <Bathtub size={19} weight="regular" aria-hidden="true" />
+  return <Car size={19} weight="regular" aria-hidden="true" />
+}
+
 function PropertyCard({ property }: { property: Property }) {
   const destination = `/propiedades/${property.slug}`
   const location = [property.district, property.catalogZone].filter(Boolean).join(' · ')
 
   return <article className="property-card catalog-card">
-    <Link className="catalog-card-image" to={destination} aria-label={`Ver ${property.title}`}>
-      <FallbackImage src={property.image} alt={property.title} />
+    <Link className="catalog-card-hitarea" to={destination} aria-label={`Ver propiedad: ${property.title}`}>
+      <div className="catalog-card-image">
+        <FallbackImage src={property.image} alt={property.title} />
+        <span className="catalog-card-badge">{property.operation} · {property.type}</span>
+      </div>
+      <div className="catalog-card-copy">
+        <h2>{property.title}</h2>
+        {location && <p className="catalog-card-location"><MapPin size={17} weight="regular" aria-hidden="true" />{location}</p>}
+        <p className="catalog-card-price">{formatPrice(property)}</p>
+        <ul className="catalog-card-features" aria-label="Características principales">
+          {propertyHighlights(property).map((fact) => <li key={fact.label} aria-label={`${fact.label}: ${fact.value}`}>
+            <PropertyFeatureIcon label={fact.label} />
+            <span>{fact.value}</span>
+          </li>)}
+        </ul>
+        <span className="catalog-card-link">Ver propiedad <ArrowRight size={18} weight="bold" aria-hidden="true" /></span>
+      </div>
     </Link>
-    <div className="catalog-card-copy">
-      <small>{property.operation} · {property.type}</small>
-      <h2><Link to={destination}>{property.title}</Link></h2>
-      {location && <p className="catalog-card-location">{location}</p>}
-      <p className="catalog-card-price">{formatPrice(property)}</p>
-      <ul className="catalog-card-features" aria-label="Características">
-        {propertyHighlights(property).map((fact) => <li key={fact.label}>{fact.value}</li>)}
-      </ul>
-      <Link className="catalog-card-link" to={destination}>Ver propiedad <ArrowRight aria-hidden="true" /></Link>
-    </div>
   </article>
 }
 
