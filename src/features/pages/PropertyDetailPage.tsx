@@ -249,7 +249,7 @@ function PropertyDetailContent({ property }: { property: Property }) {
             <p className="property-summary-description">{property.summary}</p>
           </div>
           <ul className="property-summary-highlights">{highlights.map((item) => { const Icon = highlightIcons[item.label as keyof typeof highlightIcons]; return <li key={item.label}><Icon size={27} strokeWidth={1.65} aria-hidden="true" /><span><strong>{item.value}</strong><small>{item.label}</small></span></li> })}</ul>
-          <p className="property-record-note">Código {property.code} · Información actualizada el {new Intl.DateTimeFormat('es-PE', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${property.updatedAt}T12:00:00`))}</p>
+          <div className="property-record-spacer" aria-hidden="true" />
         </div>
         <div className="property-summary-visual" aria-hidden="true"><FallbackImage src={summaryImage} alt="" /></div>
         <aside className="property-summary-action" aria-label="Consulta sobre la propiedad">
