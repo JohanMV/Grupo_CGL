@@ -497,8 +497,10 @@ p { color: #5e646b; line-height: 1.72; }
 .property-specs-list li { position: relative; padding-left: 14px; color: #5b6877; font-size: .86rem; line-height: 1.4; }
 .property-specs-list li::before { content: ''; position: absolute; top: .62em; left: 1px; width: 4px; height: 4px; border-radius: 50%; background: #c37a0d; }
 @media (min-width: 901px) {
+  .property-spec-card { display: block; padding-inline: 28px; }
   .property-spec-icon { width: 42px; height: 42px; }
   .property-spec-icon svg { width: 21px; height: 21px; }
+  .property-spec-card .property-spec-icon { margin: 0 auto 13px; }
 }
 .property-commercial dl { margin: 0; }
 .property-commercial dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; padding: 9px 0; }
