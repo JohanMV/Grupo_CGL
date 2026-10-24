@@ -569,13 +569,12 @@ p { color: #5e646b; line-height: 1.72; }
 .property-lightbox-stage { width: min(100%, 1280px); min-height: 0; flex: 1; display: flex; align-items: center; justify-content: center; gap: 17px; margin: 0 auto; }
 .property-lightbox-stage img { min-width: 0; max-width: calc(100% - 130px); max-height: 100%; object-fit: contain; }
 .property-lightbox > p { margin: 11px 0 0; color: #e5e8ea; font-size: .76rem; text-align: center; }
-.property-related { padding: 60px 0 72px; background: #f4f4f0; }
+.property-related { padding: 60px 0 72px; background: #fff; }
 .property-related-heading { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 34px; }
 .property-related-heading h2 { margin: 0; font-size: clamp(2rem, 3vw, 3rem); }
 .property-related-heading > a { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; color: #192e47; font-size: .88rem; font-weight: 750; }
 .property-related-heading > a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .property-related-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.property-related .catalog-card { background: #fff; }
 
 .about-vision { padding: 108px 0; background: #fff; }
 .about-vision-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(330px, .88fr); gap: clamp(70px, 9vw, 145px); align-items: start; padding-top: 34px; border-top: 1px solid #d8d9d5; }
