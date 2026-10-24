@@ -815,6 +815,10 @@ p { color: #5e646b; line-height: 1.72; }
   .lightbox { grid-template-columns: 42px minmax(0, 1fr) 42px; gap: 5px; padding: 18px; }
   .lightbox button { width: 40px; height: 40px; }
   .project-overview { padding: 42px 0 46px; }
+  .project-overview-panel { grid-template-columns: 1fr; overflow: hidden; background: #f4f3ef; }
+  .project-overview-copy { grid-column: 1; grid-row: 1; padding: 36px 34px; }
+  .project-overview-visual { display: block; grid-column: 1; grid-row: 2; min-height: 420px; }
+  .project-overview-card { position: relative; grid-column: 1; grid-row: 2; align-self: center; justify-self: stretch; width: auto; max-width: none; margin: 28px; background: #fff; box-shadow: 0 18px 45px rgba(22,38,56,.1); }
   .project-overview-services { margin-top: 30px; padding-top: 0; border-top: 0; }
   .project-overview-card { padding: 27px 24px 23px; }
   .project-scope { padding: 44px 0 48px; }
@@ -907,6 +911,7 @@ p { color: #5e646b; line-height: 1.72; }
 
 @media (max-width: 520px) {
   .project-overview-copy h2, .project-scope-intro h2 { font-size: clamp(2rem, 10vw, 2.65rem); }
+  .project-overview-copy { padding: 28px 20px 24px; }
   .project-overview-services { grid-template-columns: 1fr; gap: 12px; }
   .project-overview-services li, .project-overview-services li + li { padding: 0; border-left: 0; }
   .project-overview-card { padding: 24px 20px 20px; }
