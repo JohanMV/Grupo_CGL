@@ -575,6 +575,7 @@ p { color: #5e646b; line-height: 1.72; }
 .property-related-heading > a { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; color: #192e47; font-size: .88rem; font-weight: 750; }
 .property-related-heading > a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .property-related-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.property-related .catalog-card { background: #fff; }
 
 .about-vision { padding: 108px 0; background: #fff; }
 .about-vision-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(330px, .88fr); gap: clamp(70px, 9vw, 145px); align-items: start; padding-top: 34px; border-top: 1px solid #d8d9d5; }
