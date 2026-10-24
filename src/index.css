@@ -92,8 +92,10 @@ p { color: #5e646b; line-height: 1.72; }
 .mobile-menu.is-open nav > :nth-child(5) { transition-delay: .26s; }
 .mobile-menu.is-open nav > :nth-child(6) { transition-delay: .3s; }
 .mobile-menu.is-open nav > :nth-child(7) { transition-delay: .34s; }
-.mobile-subnav { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; padding: 3px 0 10px 18px; border-left: 1px solid #c99b4b; color: #e0e4e8; font-size: .9rem; }
-.mobile-subnav a { min-height: 44px; display: flex; align-items: center; line-height: 1.4; }
+.mobile-subnav { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 4px 0 4px 14px; border-left: 1px solid rgba(201,155,75,.9); }
+.mobile-subnav a { min-height: 58px; display: flex; align-items: center; gap: 9px; padding: 10px 11px; color: #f3f5f7; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.055); backdrop-filter: blur(8px); font-size: .82rem; font-weight: 600; line-height: 1.25; transition: color .25s ease, border-color .25s ease, background-color .25s ease, transform .25s ease; }
+.mobile-subnav a svg { flex: 0 0 auto; color: #d7a44d; }
+.mobile-subnav a:hover, .mobile-subnav a:focus-visible { color: #fff; border-color: rgba(215,164,77,.55); background: rgba(255,255,255,.1); transform: translateY(-1px); }
 .mobile-menu > p { margin-top: auto; max-width: 30ch; color: #c1c8cf; }
 
 @keyframes mega-menu-in {
@@ -972,6 +974,6 @@ p { color: #5e646b; line-height: 1.72; }
   .property-related-grid::-webkit-scrollbar { display: none; }
   .property-related-grid .catalog-card { flex: 0 0 calc(100% - 28px); scroll-snap-align: start; }
 }
-@media (max-width: 420px) { .mobile-subnav { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } .footer-brand { grid-column: auto; } }
-@media (max-width: 360px) { .property-explorer-grid { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .footer-grid { grid-template-columns: 1fr; } .footer-brand { grid-column: auto; } }
+@media (max-width: 360px) { .mobile-subnav, .property-explorer-grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }

@@ -76,7 +76,17 @@ export function Header() {
         <button className="mobile-close" type="button" aria-label="Cerrar menú" onClick={() => setMobileOpen(false)}><X size={28} /></button>
         <nav aria-label="Navegación móvil" onClick={() => setMobileOpen(false)}>
           <Link to="/">Inicio</Link><Link to="/nosotros">Nosotros</Link><Link to="/servicios">Servicios</Link>
-          <div className="mobile-subnav">{services.map((service) => <Link to={`/servicios/${service.slug}`} key={service.slug}>{service.shortName}</Link>)}</div>
+          <div className="mobile-subnav">
+            {services.map((service, index) => {
+              const Icon = serviceIcons[index]
+              return (
+                <Link to={`/servicios/${service.slug}`} key={service.slug}>
+                  <Icon size={19} aria-hidden="true" />
+                  <span>{service.shortName}</span>
+                </Link>
+              )
+            })}
+          </div>
           <Link to="/proyectos">Proyectos</Link><Link to="/propiedades">Propiedades</Link><Link to="/contacto">Contacto</Link>
         </nav>
         <p>Soluciones para cada etapa del inmueble y el proyecto.</p>
