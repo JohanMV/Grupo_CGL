@@ -1,0 +1,2310 @@
+{
+ "url": "http://localhost:5173/proyectos/oficina-ejecutiva",
+ "at": "2026-10-24T22:01:04.894Z",
+ "allow": [
+  "type-scale",
+  "button-hierarchy",
+  "motion-count"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.96,
+    0.99,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 1,
+    "transitions": 5,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3431,
+     "screens": 3.8,
+     "words": 209,
+     "img": 7,
+     "video": 0,
+     "canvas": 0,
+     "svg": 22,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 7,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "oficina_ejecutiva_1.webp",
+      "oficina_ejecutiva_1.webp",
+      "oficina_ejecutiva_2.webp",
+      "oficina_ejecutiva_3.webp",
+      "oficina_ejecutiva_1.webp",
+      "hero-residence.webp",
+      "Cocina_integral_1.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Adecuación de oficina ejecutiva",
+     "words": 4,
+     "chars": 31,
+     "lines": 1,
+     "size": 72,
+     "vw": 5,
+     "font": "Manrope",
+     "weight": 400,
+     "tracking": -0.055,
+     "leading": 0.98,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.63,
+     "top": 286,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Adecuación de oficina ejecutiva",
+     "words": 4,
+     "lines": 1,
+     "size": 72,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Adecuación de oficina ejecutiva",
+      "words": 4,
+      "chars": 31,
+      "lines": 1,
+      "size": 72,
+      "vw": 5,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.055,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.63,
+      "top": 286,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Adecuación de oficina ejecutiva",
+      "words": 4,
+      "chars": 31,
+      "lines": 1,
+      "size": 49,
+      "vw": 3.4,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 1221,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Alcance del proyecto",
+      "words": 3,
+      "chars": 20,
+      "lines": 2,
+      "size": 49,
+      "vw": 3.4,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 1731,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Proyectos relacionados",
+      "words": 2,
+      "chars": 22,
+      "lines": 1,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 2118,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Conversemos sobre un proyecto similar.",
+      "words": 5,
+      "chars": 38,
+      "lines": 1,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 2892,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      27,
+      49,
+      50,
+      72
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 13.1,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.7
+     },
+     "measureChars": 69,
+     "max": {
+      "size": 72,
+      "vw": 5,
+      "font": "Manrope",
+      "text": "Adecuación de oficina ejecutiva"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 5,
+     "microLabelShare": 0.036,
+     "microSamples": [
+      "Proyecto destacado",
+      "Nuestro proceso",
+      "Empresa",
+      "Servicios",
+      "Contacto"
+     ],
+     "upperShare": 0.05,
+     "centerShare": 0.02,
+     "smallText": 7
+    },
+    "eyebrows": [
+     {
+      "text": "Espacios comerciales",
+      "above": "Adecuación de oficina ejecutiva",
+      "upper": false,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 16.8,
+      "top": 239
+     },
+     {
+      "text": "Proyecto destacado",
+      "above": "Adecuación de oficina ejecutiva",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 1192
+     },
+     {
+      "text": "Nuestro proceso",
+      "above": "Alcance del proyecto",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 1702
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 11.8,
+      "top": 1727
+     },
+     {
+      "text": "02",
+      "size": 11.8,
+      "top": 1727
+     },
+     {
+      "text": "03",
+      "size": 11.8,
+      "top": 1727
+     }
+    ],
+    "color": {
+     "bodyBg": "#f8f8f6",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.12,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#192e47",
+       "top": 0,
+       "hsl": {
+        "h": 213,
+        "s": 0.48,
+        "l": 0.19
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1092,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f4f3ef",
+       "top": 1140,
+       "hsl": {
+        "h": 48,
+        "s": 0.19,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#f5f4ef",
+       "top": 1652,
+       "hsl": {
+        "h": 50,
+        "s": 0.23,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#f0f0ec",
+       "top": 2008,
+       "hsl": {
+        "h": 60,
+        "s": 0.12,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#0d1015",
+       "top": 3057,
+       "hsl": {
+        "h": 218,
+        "s": 0.24,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#5b6877",
+       "share": 0.34
+      },
+      {
+       "color": "#192e47",
+       "share": 0.17
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.14
+      },
+      {
+       "color": "#111318",
+       "share": 0.09
+      },
+      {
+       "color": "#c3c9cf",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#192e47",
+      "hsl": {
+       "h": 213,
+       "s": 0.48,
+       "l": 0.19
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 1,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Solicitar asesoría"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "aside.project-overview-card → rgba(25, 46, 71, 0.09) 0px 14px 35px 0px"
+     ],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.project-detail-hero-overlay → linear-gradient(90deg, rgba(9, 17, 27, 0.82), rgba(9, 17, 27, 0.32) 78%), linear-gradient(0deg, rgba(9, 17, 27"
+     ],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "header.site-header.site-header-solid 1440px",
+      "ul.project-overview-services 625px",
+      "div.project-overview-action 326px",
+      "div.container.footer-bottom 1280px"
+     ],
+     "outlinedBoxes": 3,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 1,
+     "boxRadius": 8,
+     "squareMedia": 6,
+     "roundedMedia": 1,
+     "mediaRadius": 8,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": false,
+       "top": 1702
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.52
+     },
+     {
+      "type": "img",
+      "ratio": 0.26
+     },
+     {
+      "type": "img",
+      "ratio": 0.09
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 76,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3431,
+    "margins": {
+     "left": 80,
+     "right": 80
+    },
+    "sections": [
+     {
+      "sel": "section.project-detail-hero.project-detail-hero-image",
+      "tag": "section",
+      "top": 0,
+      "height": 466,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Adecuación de oficina ejecutiva",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 80,
+      "right": 483,
+      "textLeft": 80,
+      "textRight": 483,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.container.project-gallery-wrap",
+      "tag": "section",
+      "top": 466,
+      "height": 626,
+      "words": 0,
+      "media": 3,
+      "middle": 10,
+      "heading": null,
+      "left": 80,
+      "right": 80,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.project-overview.scroll-reveal-section",
+      "tag": "section",
+      "top": 1092,
+      "height": 560,
+      "words": 65,
+      "media": 1,
+      "middle": 143,
+      "heading": {
+       "text": "Adecuación de oficina ejecutiva",
+       "size": 49,
+       "tag": "h2"
+      },
+      "left": 132,
+      "right": 80,
+      "textLeft": 132,
+      "textRight": 278,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.project-scope.scroll-reveal-section",
+      "tag": "section",
+      "top": 1652,
+      "height": 356,
+      "words": 65,
+      "media": 0,
+      "middle": 185,
+      "heading": {
+       "text": "Alcance del proyecto",
+       "size": 49,
+       "tag": "h2"
+      },
+      "left": 80,
+      "right": 123,
+      "textLeft": 80,
+      "textRight": 123,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-projects",
+      "tag": "section",
+      "top": 2008,
+      "height": 809,
+      "words": 9,
+      "media": 2,
+      "middle": 18,
+      "heading": {
+       "text": "Proyectos relacionados",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 80,
+      "right": 80,
+      "textLeft": 80,
+      "textRight": 615,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.contact-cta.scroll-reveal-section",
+      "tag": "section",
+      "top": 2817,
+      "height": 240,
+      "words": 17,
+      "media": 0,
+      "middle": 317,
+      "heading": {
+       "text": "Conversemos sobre un proyecto similar.",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 80,
+      "right": 132,
+      "textLeft": 80,
+      "textRight": 132,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 3057,
+      "height": 374,
+      "words": 31,
+      "media": 0,
+      "middle": 233,
+      "heading": {
+       "text": "CGL",
+       "size": 27,
+       "tag": "span"
+      },
+      "left": 80,
+      "right": 168,
+      "textLeft": 80,
+      "textRight": 168,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Adecuación de oficina ejecutiva",
+      "size": 72,
+      "top": 286,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 80,
+      "n": 7
+     },
+     {
+      "x": 132,
+      "n": 3
+     },
+     {
+      "x": 560,
+      "n": 1
+     },
+     {
+      "x": 839,
+      "n": 1
+     },
+     {
+      "x": 1118,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 13,
+    "bodySize": 13,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.02,
+    "voidBox": {
+     "x": 0,
+     "y": 480,
+     "w": 60,
+     "h": 420
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.89,
+    0.99,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 1,
+    "transitions": 5,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 3519,
+     "screens": 3.4,
+     "words": 201,
+     "img": 7,
+     "video": 0,
+     "canvas": 0,
+     "svg": 22,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "oficina_ejecutiva_1.webp",
+      "oficina_ejecutiva_1.webp",
+      "oficina_ejecutiva_2.webp",
+      "oficina_ejecutiva_3.webp",
+      "hero-residence.webp",
+      "Cocina_integral_1.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Adecuación de oficina ejecutiva",
+     "words": 4,
+     "chars": 31,
+     "lines": 1,
+     "size": 41.6,
+     "vw": 5.4,
+     "font": "Manrope",
+     "weight": 400,
+     "tracking": -0.055,
+     "leading": 0.98,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.95,
+     "top": 286,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Adecuación de oficina ejecutiva",
+     "words": 4,
+     "lines": 1,
+     "size": 41.6,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "CGL",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 27.2,
+      "vw": 3.5,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 1.5,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.06,
+      "top": 17,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Adecuación de oficina ejecutiva",
+      "words": 4,
+      "chars": 31,
+      "lines": 1,
+      "size": 41.6,
+      "vw": 5.4,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.055,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 286,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Adecuación de oficina ejecutiva",
+      "words": 4,
+      "chars": 31,
+      "lines": 1,
+      "size": 34.4,
+      "vw": 4.5,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 1139,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Alcance del proyecto",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 4.4,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 1849,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Proyectos relacionados",
+      "words": 2,
+      "chars": 22,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 2398,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Conversemos sobre un proyecto similar.",
+      "words": 5,
+      "chars": 38,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.66,
+      "top": 2999,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "CGL",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 27.2,
+      "vw": 3.5,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 1.5,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.06,
+      "top": 3225,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      27,
+      32,
+      34,
+      42
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 13.1,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.7
+     },
+     "measureChars": 69,
+     "max": {
+      "size": 41.6,
+      "vw": 5.4,
+      "font": "Manrope",
+      "text": "Adecuación de oficina ejecutiva"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 5,
+     "microLabelShare": 0.038,
+     "microSamples": [
+      "Proyecto destacado",
+      "Nuestro proceso",
+      "Empresa",
+      "Servicios",
+      "Contacto"
+     ],
+     "upperShare": 0.05,
+     "centerShare": 0.01,
+     "smallText": 6
+    },
+    "eyebrows": [
+     {
+      "text": "Espacios comerciales",
+      "above": "Adecuación de oficina ejecutiva",
+      "upper": false,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 16.8,
+      "top": 239
+     },
+     {
+      "text": "Proyecto destacado",
+      "above": "Adecuación de oficina ejecutiva",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 1110
+     },
+     {
+      "text": "Nuestro proceso",
+      "above": "Alcance del proyecto",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 1820
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 11.8,
+      "top": 2006
+     },
+     {
+      "text": "02",
+      "size": 11.8,
+      "top": 2006
+     },
+     {
+      "text": "03",
+      "size": 11.8,
+      "top": 2006
+     }
+    ],
+    "color": {
+     "bodyBg": "#f8f8f6",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.12,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#192e47",
+       "top": 0,
+       "hsl": {
+        "h": 213,
+        "s": 0.48,
+        "l": 0.19
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1062,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f5f4ef",
+       "top": 1770,
+       "hsl": {
+        "h": 50,
+        "s": 0.23,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#f0f0ec",
+       "top": 2288,
+       "hsl": {
+        "h": 60,
+        "s": 0.12,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#0d1015",
+       "top": 3145,
+       "hsl": {
+        "h": 218,
+        "s": 0.24,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#5b6877",
+       "share": 0.35
+      },
+      {
+       "color": "#192e47",
+       "share": 0.18
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.14
+      },
+      {
+       "color": "#111318",
+       "share": 0.06
+      },
+      {
+       "color": "#c3c9cf",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#192e47",
+      "hsl": {
+       "h": 213,
+       "s": 0.48,
+       "l": 0.19
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 0,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.project-detail-hero-overlay → linear-gradient(90deg, rgba(9, 17, 27, 0.82), rgba(9, 17, 27, 0.32) 78%), linear-gradient(0deg, rgba(9, 17, 27"
+     ],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "header.site-header.site-header-solid 768px",
+      "ul.project-overview-services 732px",
+      "div.project-overview-action 564px",
+      "div.container.footer-bottom 732px"
+     ],
+     "outlinedBoxes": 3,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 6,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": false,
+       "top": 1981
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.43
+     },
+     {
+      "type": "img",
+      "ratio": 0.34
+     },
+     {
+      "type": "img",
+      "ratio": 0.09
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 76,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 3519,
+    "margins": {
+     "left": 18,
+     "right": 18
+    },
+    "sections": [
+     {
+      "sel": "section.project-detail-hero.project-detail-hero-image",
+      "tag": "section",
+      "top": 0,
+      "height": 436,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Adecuación de oficina ejecutiva",
+       "size": 42,
+       "tag": "h1"
+      },
+      "left": 18,
+      "right": 243,
+      "textLeft": 18,
+      "textRight": 243,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.container.project-gallery-wrap",
+      "tag": "section",
+      "top": 436,
+      "height": 626,
+      "words": 0,
+      "media": 3,
+      "middle": 10,
+      "heading": null,
+      "left": 18,
+      "right": 18,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.project-overview.scroll-reveal-section",
+      "tag": "section",
+      "top": 1062,
+      "height": 708,
+      "words": 65,
+      "media": 0,
+      "middle": 66,
+      "heading": {
+       "text": "Adecuación de oficina ejecutiva",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 18,
+      "right": 79,
+      "textLeft": 18,
+      "textRight": 79,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.project-scope.scroll-reveal-section",
+      "tag": "section",
+      "top": 1770,
+      "height": 518,
+      "words": 65,
+      "media": 0,
+      "middle": 72,
+      "heading": {
+       "text": "Alcance del proyecto",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 18,
+      "right": 53,
+      "textLeft": 18,
+      "textRight": 53,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-projects",
+      "tag": "section",
+      "top": 2288,
+      "height": 636,
+      "words": 9,
+      "media": 2,
+      "middle": 18,
+      "heading": {
+       "text": "Proyectos relacionados",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 18,
+      "right": 18,
+      "textLeft": 18,
+      "textRight": 279,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.contact-cta.scroll-reveal-section",
+      "tag": "section",
+      "top": 2924,
+      "height": 221,
+      "words": 17,
+      "media": 0,
+      "middle": 62,
+      "heading": {
+       "text": "Conversemos sobre un proyecto similar.",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 18,
+      "right": 70,
+      "textLeft": 18,
+      "textRight": 70,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 3145,
+      "height": 374,
+      "words": 31,
+      "media": 0,
+      "middle": 109,
+      "heading": {
+       "text": "CGL",
+       "size": 27,
+       "tag": "span"
+      },
+      "left": 18,
+      "right": 18,
+      "textLeft": 18,
+      "textRight": 18,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Adecuación de oficina ejecutiva",
+      "size": 42,
+      "top": 286,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 18,
+      "n": 10
+     },
+     {
+      "x": 41,
+      "n": 1
+     },
+     {
+      "x": 288,
+      "n": 1
+     },
+     {
+      "x": 536,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 13,
+    "bodySize": 13,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.91,
+    0.98,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 1,
+    "transitions": 5,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 5131,
+     "screens": 6.1,
+     "words": 201,
+     "img": 7,
+     "video": 0,
+     "canvas": 0,
+     "svg": 22,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "oficina_ejecutiva_1.webp",
+      "oficina_ejecutiva_1.webp",
+      "oficina_ejecutiva_2.webp",
+      "oficina_ejecutiva_3.webp",
+      "hero-residence.webp",
+      "Cocina_integral_1.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Adecuación de oficina ejecutiva",
+     "words": 4,
+     "chars": 31,
+     "lines": 2,
+     "size": 41.6,
+     "vw": 10.7,
+     "font": "Manrope",
+     "weight": 400,
+     "tracking": -0.055,
+     "leading": 0.98,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 286,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Adecuación de oficina ejecutiva",
+     "words": 4,
+     "lines": 2,
+     "size": 41.6,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "CGL",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 27.2,
+      "vw": 7,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 1.5,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.12,
+      "top": 11,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Adecuación de oficina ejecutiva",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.055,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 286,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Adecuación de oficina ejecutiva",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 39,
+      "vw": 10,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1173,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Alcance del proyecto",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 39,
+      "vw": 10,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2177,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Proyectos relacionados",
+      "words": 2,
+      "chars": 22,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3097,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Conversemos sobre un proyecto similar.",
+      "words": 5,
+      "chars": 38,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3936,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "CGL",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 27.2,
+      "vw": 7,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 1.5,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.12,
+      "top": 4301,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      27,
+      32,
+      39,
+      42
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 13.1,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.7
+     },
+     "measureChars": 48,
+     "max": {
+      "size": 41.6,
+      "vw": 10.7,
+      "font": "Manrope",
+      "text": "Adecuación de oficina ejecutiva"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 5,
+     "microLabelShare": 0.038,
+     "microSamples": [
+      "Proyecto destacado",
+      "Nuestro proceso",
+      "Empresa",
+      "Servicios",
+      "Contacto"
+     ],
+     "upperShare": 0.05,
+     "centerShare": 0.01,
+     "smallText": 6
+    },
+    "eyebrows": [
+     {
+      "text": "Espacios comerciales",
+      "above": "Adecuación de oficina ejecutiva",
+      "upper": false,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 16.8,
+      "top": 239
+     },
+     {
+      "text": "Proyecto destacado",
+      "above": "Adecuación de oficina ejecutiva",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 1143
+     },
+     {
+      "text": "Nuestro proceso",
+      "above": "Alcance del proyecto",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 2147
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 11.8,
+      "top": 2342
+     },
+     {
+      "text": "02",
+      "size": 11.8,
+      "top": 2564
+     },
+     {
+      "text": "03",
+      "size": 11.8,
+      "top": 2787
+     }
+    ],
+    "color": {
+     "bodyBg": "#f8f8f6",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.12,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#192e47",
+       "top": 0,
+       "hsl": {
+        "h": 213,
+        "s": 0.48,
+        "l": 0.19
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1101,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f4f3ef",
+       "top": 1622,
+       "hsl": {
+        "h": 48,
+        "s": 0.19,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#f5f4ef",
+       "top": 2103,
+       "hsl": {
+        "h": 50,
+        "s": 0.23,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#f0f0ec",
+       "top": 3021,
+       "hsl": {
+        "h": 60,
+        "s": 0.12,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#0d1015",
+       "top": 4221,
+       "hsl": {
+        "h": 218,
+        "s": 0.24,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#5b6877",
+       "share": 0.35
+      },
+      {
+       "color": "#192e47",
+       "share": 0.18
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.14
+      },
+      {
+       "color": "#111318",
+       "share": 0.06
+      },
+      {
+       "color": "#c3c9cf",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#192e47",
+      "hsl": {
+       "h": 213,
+       "s": 0.48,
+       "l": 0.19
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 0,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.project-detail-hero-overlay → linear-gradient(90deg, rgba(9, 17, 27, 0.82), rgba(9, 17, 27, 0.32) 78%), linear-gradient(0deg, rgba(9, 17, 27"
+     ],
+     "gradientText": 0,
+     "hairlines": 3,
+     "hairlineSamples": [
+      "header.site-header.site-header-solid 390px",
+      "div.project-overview-action 318px",
+      "div.container.footer-bottom 358px"
+     ],
+     "outlinedBoxes": 3,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 4,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.6
+     },
+     {
+      "type": "img",
+      "ratio": 0.33
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 5131,
+    "margins": {
+     "left": 16,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "section.project-detail-hero.project-detail-hero-image",
+      "tag": "section",
+      "top": 0,
+      "height": 505,
+      "words": 24,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Adecuación de oficina ejecutiva",
+       "size": 42,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 23,
+      "textLeft": 16,
+      "textRight": 23,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.container.project-gallery-wrap",
+      "tag": "section",
+      "top": 505,
+      "height": 596,
+      "words": 0,
+      "media": 3,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 16,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.project-overview.scroll-reveal-section",
+      "tag": "section",
+      "top": 1101,
+      "height": 1002,
+      "words": 65,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Adecuación de oficina ejecutiva",
+       "size": 39,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 19,
+      "textLeft": 16,
+      "textRight": 19,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.project-scope.scroll-reveal-section",
+      "tag": "section",
+      "top": 2103,
+      "height": 918,
+      "words": 65,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Alcance del proyecto",
+       "size": 39,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 38,
+      "textLeft": 16,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.section.related-projects",
+      "tag": "section",
+      "top": 3021,
+      "height": 840,
+      "words": 9,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "Proyectos relacionados",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.contact-cta.scroll-reveal-section",
+      "tag": "section",
+      "top": 3861,
+      "height": 360,
+      "words": 17,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Conversemos sobre un proyecto similar.",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 65,
+      "textLeft": 16,
+      "textRight": 65,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 4221,
+      "height": 911,
+      "words": 31,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "CGL",
+       "size": 27,
+       "tag": "span"
+      },
+      "left": 16,
+      "right": 148,
+      "textLeft": 16,
+      "textRight": 148,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Adecuación de oficina ejecutiva",
+      "size": 42,
+      "top": 286,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 10
+     },
+     {
+      "x": 37,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 13,
+    "bodySize": 13,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "3 eyebrow/kicker label(s) above headings: \"Espacios comerciales\" above \"Adecuación de oficina ejecutiva\"; \"Proyecto destacado\" above \"Adecuación de oficina ejecutiva\"; \"Nuestro proceso\" above \"Alcance del proyecto\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "width": 1440,
+   "message": "Decorative index numbers: \"01\", \"02\", \"03\"",
+   "fix": "Remove them. If order truly matters, write it into the words (\"First, …\") or use a real <ol>.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "5 tiny uppercase letter-spaced labels (e.g. \"Proyecto destacado\", \"Nuestro proceso\", \"Empresa\", \"Servicios\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "1 gradient fill(s): div.project-detail-hero-overlay → linear-gradient(90deg, rgba(9, 17, 27, 0.82), rgba(9, 17, 27, 0.32) 78%), linear-gradient(0deg, rgba(9, 17, 27",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "1 box-shadow(s) on elements at rest: aside.project-overview-card → rgba(25, 46, 71, 0.09) 0px 14px 35px 0px",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars)."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "4 thin rule(s)/divider line(s): header.site-header.site-header-solid 1440px | ul.project-overview-services 625px | div.project-overview-action 326px | div.container.footer-bottom 1280px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "3 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "icon-cards",
+   "width": 1440,
+   "message": "1 row(s) of identical cards each topped with a small icon (3 cards).",
+   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (section #f4f3ef, section #f5f4ef).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "12 different font sizes (8, 11, 12, 13, 14, 15, 16, 17, 27, 49, 50, 72).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 13.1px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "grey-body",
+   "width": 1440,
+   "message": "The running text is a soft grey on its ground (5.7:1).",
+   "fix": "Set body copy in the full ink (7:1 or more). Keep the muted ink for secondary notes; pages read thin and unfinished when everything is grey.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "7 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 7 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 768,
+   "message": "No visible button in the first screen.",
+   "fix": "Give the one primary action a real button in the first screen (a filled or solid-bordered control, 44px or taller), not only a link in the navigation.",
+   "alsoAt": [
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "D:\\Grupo_CGL\\.taste-skill\\project-overview-image-panel\\desktop-fold.jpg",
+   "pages": [
+    "D:\\Grupo_CGL\\.taste-skill\\project-overview-image-panel\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "D:\\Grupo_CGL\\.taste-skill\\project-overview-image-panel\\tablet-fold.jpg",
+   "pages": [
+    "D:\\Grupo_CGL\\.taste-skill\\project-overview-image-panel\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "D:\\Grupo_CGL\\.taste-skill\\project-overview-image-panel\\mobile-fold.jpg",
+   "pages": [
+    "D:\\Grupo_CGL\\.taste-skill\\project-overview-image-panel\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

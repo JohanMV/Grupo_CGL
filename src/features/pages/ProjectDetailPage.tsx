@@ -1,7 +1,7 @@
 import { ArrowRight } from '@phosphor-icons/react'
 import { BadgeCheck, CalendarDays, HardHat, House, Layers3, MapPin, Network, PencilRuler } from 'lucide-react'
 import { Link, useParams } from 'react-router-dom'
-import { Breadcrumbs, ButtonLink } from '@/components/ui'
+import { Breadcrumbs, ButtonLink, FallbackImage } from '@/components/ui'
 import { ContactCTA } from '@/components/sections'
 import { getProject, projects } from '@/data/projects'
 import { Lightbox } from '@/features/projects/components/Lightbox'
@@ -33,20 +33,23 @@ export function ProjectDetailPage() {
       <div className="container"><Breadcrumbs items={[{ label: 'Inicio', to: '/' }, { label: 'Proyectos', to: '/proyectos' }, { label: project.title }]} /><p className="eyebrow">{project.category}</p><h1>{project.title}</h1><p>{project.summary}</p></div>
     </section>
     <section className="container project-gallery-wrap"><Lightbox images={project.gallery} title={project.title} /></section>
-    <section className="project-overview" aria-labelledby="project-overview-title"><div className="container project-overview-grid">
-      <div className="project-overview-copy">
-        <p className="project-section-kicker"><span aria-hidden="true" />Proyecto destacado</p>
-        <h2 id="project-overview-title">{project.title}</h2>
-        <p className="project-overview-lead">{project.overviewLead ?? project.summary}</p>
-        <p className="project-overview-description">{project.description}</p>
-        <ul className="project-overview-services" aria-label="Servicios destacados">
-          {project.scope.map((item, index) => { const Icon = scopeIcons[index % scopeIcons.length]; return <li key={item.title}><Icon size={25} strokeWidth={1.6} aria-hidden="true" /><span>{item.title}</span></li> })}
-        </ul>
+    <section className="project-overview" aria-labelledby="project-overview-title"><div className="container">
+      <div className="project-overview-panel">
+        <div className="project-overview-copy">
+          <p className="project-section-kicker"><span aria-hidden="true" />Proyecto destacado</p>
+          <h2 id="project-overview-title">{project.title}</h2>
+          <p className="project-overview-lead">{project.overviewLead ?? project.summary}</p>
+          <p className="project-overview-description">{project.description}</p>
+          <ul className="project-overview-services" aria-label="Servicios destacados">
+            {project.scope.map((item, index) => { const Icon = scopeIcons[index % scopeIcons.length]; return <li key={item.title}><Icon size={25} strokeWidth={1.6} aria-hidden="true" /><span>{item.title}</span></li> })}
+          </ul>
+        </div>
+        <div className="project-overview-visual" aria-hidden="true"><FallbackImage src={project.image} alt="" /></div>
+        <aside className="project-overview-card" aria-label="Detalles del proyecto">
+          <dl>{projectDetails.map(({ label, value, Icon }) => <div key={label}><Icon size={22} strokeWidth={1.6} aria-hidden="true" /><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+          <div className="project-overview-action"><ButtonLink to={contactUrl} className="project-overview-cta">Solicitar asesoría</ButtonLink></div>
+        </aside>
       </div>
-      <aside className="project-overview-card" aria-label="Detalles del proyecto">
-        <dl>{projectDetails.map(({ label, value, Icon }) => <div key={label}><Icon size={22} strokeWidth={1.6} aria-hidden="true" /><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
-        <div className="project-overview-action"><ButtonLink to={contactUrl} className="project-overview-cta">Solicitar asesoría</ButtonLink></div>
-      </aside>
     </div></section>
     <section className="project-scope" aria-labelledby="project-scope-title"><div className="container project-scope-grid">
       <div className="project-scope-intro"><p className="project-section-kicker"><span aria-hidden="true" />Nuestro proceso</p><h2 id="project-scope-title">Alcance del proyecto</h2><p>Coordinamos cada prestación según los objetivos y requerimientos de este proyecto.</p></div>
