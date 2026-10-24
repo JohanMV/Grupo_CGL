@@ -91,8 +91,8 @@ export function Header() {
           <Link to="/proyectos">Proyectos</Link><Link to="/propiedades">Propiedades</Link><Link to="/contacto">Contacto</Link>
         </nav>
         <a className="mobile-whatsapp" href={`https://wa.me/${contactData.whatsappNumber}`} target="_blank" rel="noreferrer" onClick={() => setMobileOpen(false)}>
-          <WhatsappLogo size={26} weight="fill" aria-hidden="true" />
-          <span><strong>WhatsApp</strong><small>{contactData.phone}</small></span>
+          <span>Hablar con un asesor</span>
+          <WhatsappLogo size={19} weight="fill" aria-hidden="true" />
         </a>
       </div>
     </>
