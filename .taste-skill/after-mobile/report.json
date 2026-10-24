@@ -1,0 +1,741 @@
+{
+ "url": "http://localhost:5173/propiedades/departamento-con-terraza",
+ "at": "2026-10-23T18:36:30.512Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 6051,
+     "screens": 7.2,
+     "words": 334,
+     "img": 12,
+     "video": 0,
+     "canvas": 0,
+     "svg": 23,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 9,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "apartment-living.webp",
+      "apartment-living.webp",
+      "apartment-living.webp",
+      "terraza-cocina.webp",
+      "terraza-dormitorio.webp",
+      "terraza-bano.webp",
+      "renovated-kitchen.webp",
+      "hero-residence.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Departamento con terraza urbana",
+     "words": 4,
+     "chars": 31,
+     "lines": 2,
+     "size": 35.1,
+     "vw": 9,
+     "font": "Manrope",
+     "weight": 400,
+     "tracking": -0.04,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 181,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Departamento con terraza urbana",
+     "words": 4,
+     "lines": 2,
+     "size": 35.1,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "CGL",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 27.2,
+      "vw": 7,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 1.5,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.12,
+      "top": 11,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Departamento con terraza urbana",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 35.1,
+      "vw": 9,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.04,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 181,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 750,000",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 39.2,
+      "vw": 10.1,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 901,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Explora cada espacio",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.68,
+      "top": 1639,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sobre esta propiedad",
+      "words": 3,
+      "chars": 20,
+      "lines": 2,
+      "size": 42.4,
+      "vw": 10.9,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.64,
+      "top": 2114,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ubicación y entorno",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 2626,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Conversa con un asesor inmobiliario",
+      "words": 5,
+      "chars": 35,
+      "lines": 2,
+      "size": 30.4,
+      "vw": 7.8,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3250,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Propiedades relacionadas",
+      "words": 2,
+      "chars": 24,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 3554,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "CGL",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 27.2,
+      "vw": 7,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.04,
+      "leading": 1.5,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.12,
+      "top": 5220,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      27,
+      30,
+      32,
+      35,
+      39,
+      42
+     ],
+     "sizeCount": 16,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.2
+     },
+     "measureChars": 45,
+     "max": {
+      "size": 42.4,
+      "vw": 10.9,
+      "font": "Manrope",
+      "text": "Sobre esta propiedad"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 3,
+     "microLabelShare": 0.012,
+     "microSamples": [
+      "Empresa",
+      "Servicios",
+      "Contacto"
+     ],
+     "upperShare": 0.03,
+     "centerShare": 0.04,
+     "smallText": 5
+    },
+    "eyebrows": [
+     {
+      "text": "EN VENTA",
+      "above": "S/ 750,000",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12.2,
+      "top": 869
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f8f8f6",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.12,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#192e47",
+       "top": 0,
+       "hsl": {
+        "h": 213,
+        "s": 0.48,
+        "l": 0.19
+       }
+      },
+      {
+       "color": "#e3e5e1",
+       "top": 406,
+       "hsl": {
+        "h": 90,
+        "s": 0.07,
+        "l": 0.89
+       }
+      },
+      {
+       "color": "#f4f4f1",
+       "top": 1267,
+       "hsl": {
+        "h": 60,
+        "s": 0.12,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#f4f8fb",
+       "top": 1605,
+       "hsl": {
+        "h": 206,
+        "s": 0.47,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#f3f0e9",
+       "top": 2594,
+       "hsl": {
+        "h": 42,
+        "s": 0.29,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#e4e6e2",
+       "top": 2782,
+       "hsl": {
+        "h": 90,
+        "s": 0.07,
+        "l": 0.89
+       }
+      },
+      {
+       "color": "#f4f4f0",
+       "top": 3502,
+       "hsl": {
+        "h": 60,
+        "s": 0.15,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#0d1015",
+       "top": 5140,
+       "hsl": {
+        "h": 218,
+        "s": 0.24,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#192e47",
+       "share": 0.14
+      },
+      {
+       "color": "#536170",
+       "share": 0.12
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.09
+      },
+      {
+       "color": "#46515b",
+       "share": 0.09
+      },
+      {
+       "color": "#111318",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#263746"
+     },
+     "lowContrast": [
+      {
+       "text": "Ubicación aproximada · Mapa de Google Ma",
+       "ratio": 4.4,
+       "need": 4.5,
+       "size": 12.5,
+       "fg": "#64707e",
+       "bg": "#f3f0e9"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 7,
+     "inHero": 0,
+     "radius": 0,
+     "height": 42,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.property-detail-hero-overlay → linear-gradient(90deg, rgba(9, 17, 27, 0.82), rgba(9, 17, 27, 0.32) 78%), linear-gradient(0deg, rgba(9, 17, 27"
+     ],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "header.site-header.site-header-solid 390px",
+      "div.container.footer-bottom 358px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 5,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.38
+     },
+     {
+      "type": "img",
+      "ratio": 0.34
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 6051,
+    "margins": {
+     "left": 16,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "main",
+      "tag": "main",
+      "top": 0,
+      "height": 5140,
+      "words": 292,
+      "media": 10,
+      "middle": 145,
+      "heading": {
+       "text": "Sobre esta propiedad",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 0,
+      "textLeft": 16,
+      "textRight": -177,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 5140,
+      "height": 911,
+      "words": 31,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "CGL",
+       "size": 27,
+       "tag": "span"
+      },
+      "left": 16,
+      "right": 148,
+      "textLeft": 16,
+      "textRight": 148,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Departamento con terraza urbana",
+      "size": 35,
+      "top": 181,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Cocina",
+      "side": "right",
+      "px": 9
+     }
+    ],
+    "edges": [
+     {
+      "x": 37,
+      "n": 12
+     },
+     {
+      "x": 16,
+      "n": 7
+     }
+    ],
+    "leftBlocks": 19,
+    "bodySize": 15,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 390,
+   "message": "1 eyebrow/kicker label(s) above headings: \"EN VENTA\" above \"S/ 750,000\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence."
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 390,
+   "message": "3 tiny uppercase letter-spaced labels (e.g. \"Empresa\", \"Servicios\", \"Contacto\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 390,
+   "message": "1 gradient fill(s): div.property-detail-hero-overlay → linear-gradient(90deg, rgba(9, 17, 27, 0.82), rgba(9, 17, 27, 0.32) 78%), linear-gradient(0deg, rgba(9, 17, 27",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 390,
+   "message": "2 thin rule(s)/divider line(s): header.site-header.site-header-solid 390px | div.container.footer-bottom 358px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 390,
+   "message": "Yellow-cream background (section #f3f0e9).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream."
+  },
+  {
+   "level": "WARN",
+   "id": "contrast",
+   "width": 390,
+   "message": "Low-contrast text: \"Ubicación aproximada · Mapa de Google Ma\" 4.4:1 needs 4.5:1",
+   "fix": "Darken or lighten the text colour."
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 390,
+   "message": "16 different font sizes (8, 12, 13, 14, 15, 16, 17, 18, 19, 20, 27, 30, 32, 35, 39, 42).",
+   "fix": "A page needs about five: display, heading, lead, body, small."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 390,
+   "message": "No visible button in the first phone screen.",
+   "fix": "On a phone the first screen still holds the headline, the supporting sentence and the action; move navigation into one row or a menu so it does not push them down."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 390,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 390,
+   "message": "5 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px."
+  },
+  {
+   "level": "FAIL",
+   "id": "edge-text",
+   "width": 390,
+   "message": "1 text block(s) sit within 12px of the screen edge: \"Cocina\" (9px from the right)",
+   "fix": "Keep text inside the page margin (16–20px). Only display type deliberately bled past the edge may touch it."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "D:\\Grupo_CGL\\.taste-skill\\after-mobile\\mobile-fold.jpg",
+   "pages": [
+    "D:\\Grupo_CGL\\.taste-skill\\after-mobile\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

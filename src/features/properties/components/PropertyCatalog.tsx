@@ -139,9 +139,10 @@ function PropertyFeatureIcon({ label }: { label: string }) {
   return <Car size={19} weight="regular" aria-hidden="true" />
 }
 
-function PropertyCard({ property }: { property: Property }) {
+export function PropertyCard({ property, headingLevel = 'h2' }: { property: Property; headingLevel?: 'h2' | 'h3' }) {
   const destination = `/propiedades/${property.slug}`
   const location = [property.district, property.catalogZone].filter(Boolean).join(' · ')
+  const Heading = headingLevel
 
   return <article className="property-card catalog-card">
     <Link className="catalog-card-hitarea" to={destination} aria-label={`Ver propiedad: ${property.title}`}>
@@ -150,7 +151,7 @@ function PropertyCard({ property }: { property: Property }) {
         <span className="catalog-card-badge">{property.operation} · {property.type}</span>
       </div>
       <div className="catalog-card-copy">
-        <h2>{property.title}</h2>
+        <Heading>{property.title}</Heading>
         {location && <p className="catalog-card-location"><MapPin size={17} weight="regular" aria-hidden="true" />{location}</p>}
         <p className="catalog-card-price">{formatPrice(property)}</p>
         <ul className="catalog-card-features" aria-label="Características principales">

@@ -1,4 +1,3 @@
-import { Buildings, Compass, Handshake, Ruler } from '@phosphor-icons/react'
 import studioImage from '@/assets/images/studio-collaboration.webp'
 import buildingImage from '@/assets/images/managed-building.webp'
 import { ButtonLink, FallbackImage, Reveal } from '@/components/ui'
@@ -18,13 +17,3 @@ export function ManagementSpotlight() {
   )
 }
 
-const pillars = [
-  { icon: Compass, title: 'Enfoque integral', text: 'Servicios relacionados con el inmueble reunidos bajo una propuesta de atención.' },
-  { icon: Handshake, title: 'Atención personalizada', text: 'Orientación según la necesidad y el tipo de proyecto de cada cliente.' },
-  { icon: Ruler, title: 'Visión técnica', text: 'Revisión de requisitos, alcances y decisiones relevantes de cada especialidad.' },
-  { icon: Buildings, title: 'Acompañamiento', text: 'Comunicación y coordinación durante las etapas acordadas del servicio.' },
-]
-
-export function ValuePillars() {
-  return <section className="section pillars"><div className="container"><Reveal><h2>Soluciones coordinadas para cada inmueble.</h2></Reveal><div className="pillar-grid">{pillars.map(({ icon: Icon, title, text }, index) => <Reveal key={title} delay={index * 0.06}><Icon size={30} weight="thin" /><h3>{title}</h3><p>{text}</p></Reveal>)}</div></div></section>
-}

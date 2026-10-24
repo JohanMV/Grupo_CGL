@@ -1,0 +1,711 @@
+{
+ "url": "http://localhost:5173/propiedades/departamento-con-terraza",
+ "at": "2026-10-23T19:12:00.963Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3763,
+     "screens": 4.2,
+     "words": 323,
+     "img": 12,
+     "video": 0,
+     "canvas": 0,
+     "svg": 23,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 11,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "apartment-living.webp",
+      "apartment-living.webp",
+      "terraza-cocina.webp",
+      "terraza-dormitorio.webp",
+      "apartment-living.webp",
+      "terraza-cocina.webp",
+      "terraza-dormitorio.webp",
+      "terraza-bano.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Departamento con terraza urbana",
+     "words": 4,
+     "chars": 31,
+     "lines": 1,
+     "size": 61.9,
+     "vw": 4.3,
+     "font": "Manrope",
+     "weight": 400,
+     "tracking": -0.04,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.59,
+     "top": 208,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Departamento con terraza urbana",
+     "words": 4,
+     "lines": 1,
+     "size": 61.9,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Departamento con terraza urbana",
+      "words": 4,
+      "chars": 31,
+      "lines": 1,
+      "size": 61.9,
+      "vw": 4.3,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.04,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.59,
+      "top": 208,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "S/ 750,000",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 72,
+      "vw": 5,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.04,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.58,
+      "top": 1148,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Explora cada espacio",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 1502,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sobre esta propiedad",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1901,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ubicación y entorno",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.41,
+      "top": 1901,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Conversa con un asesor inmobiliario",
+      "words": 5,
+      "chars": 35,
+      "lines": 1,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 2528,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Propiedades relacionadas",
+      "words": 2,
+      "chars": 24,
+      "lines": 1,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Manrope",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 2725,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Manrope",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      27,
+      43,
+      62,
+      72
+     ],
+     "sizeCount": 14,
+     "notLoaded": [],
+     "body": {
+      "font": "Manrope",
+      "size": 16,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.2
+     },
+     "measureChars": 71,
+     "max": {
+      "size": 72,
+      "vw": 5,
+      "font": "Manrope",
+      "text": "S/ 750,000"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 3,
+     "microLabelShare": 0.012,
+     "microSamples": [
+      "Empresa",
+      "Servicios",
+      "Contacto"
+     ],
+     "upperShare": 0.03,
+     "centerShare": 0.04,
+     "smallText": 6
+    },
+    "eyebrows": [
+     {
+      "text": "EN VENTA",
+      "above": "S/ 750,000",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12.2,
+      "top": 1116
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f8f8f6",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.12,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#192e47",
+       "top": 0,
+       "hsl": {
+        "h": 213,
+        "s": 0.48,
+        "l": 0.19
+       }
+      },
+      {
+       "color": "#e3e5e1",
+       "top": 422,
+       "hsl": {
+        "h": 90,
+        "s": 0.07,
+        "l": 0.89
+       }
+      },
+      {
+       "color": "#f4f8fb",
+       "top": 1468,
+       "hsl": {
+        "h": 206,
+        "s": 0.47,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#f7f8f6",
+       "top": 1833,
+       "hsl": {
+        "h": 90,
+        "s": 0.12,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#f4f4f0",
+       "top": 2665,
+       "hsl": {
+        "h": 60,
+        "s": 0.15,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#0d1015",
+       "top": 3388,
+       "hsl": {
+        "h": 218,
+        "s": 0.24,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#192e47",
+       "share": 0.14
+      },
+      {
+       "color": "#46515b",
+       "share": 0.13
+      },
+      {
+       "color": "#536170",
+       "share": 0.13
+      },
+      {
+       "color": "#111318",
+       "share": 0.1
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.1
+      }
+     ],
+     "button": {
+      "bg": "#ffffff",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 1
+      },
+      "fg": "#263746"
+     },
+     "lowContrast": [
+      {
+       "text": "Datos del inmueble",
+       "ratio": 4.3,
+       "need": 4.5,
+       "size": 15,
+       "fg": "#9a6c28",
+       "bg": "#f7f8f6"
+      },
+      {
+       "text": "Distribución",
+       "ratio": 4.3,
+       "need": 4.5,
+       "size": 15,
+       "fg": "#9a6c28",
+       "bg": "#f7f8f6"
+      },
+      {
+       "text": "Equipamiento",
+       "ratio": 4.3,
+       "need": 4.5,
+       "size": 15,
+       "fg": "#9a6c28",
+       "bg": "#f7f8f6"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 1,
+     "radius": 0,
+     "height": 42,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Solicitar asesoría"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.property-detail-hero-overlay → linear-gradient(90deg, rgba(9, 17, 27, 0.82), rgba(9, 17, 27, 0.32) 78%), linear-gradient(0deg, rgba(9, 17, 27"
+     ],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "header.site-header.site-header-solid 1440px",
+      "div.container.footer-bottom 1280px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 11,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 2804
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.39
+     },
+     {
+      "type": "img",
+      "ratio": 0.3
+     },
+     {
+      "type": "img",
+      "ratio": 0.1
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 76,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3763,
+    "margins": {
+     "left": 80,
+     "right": 80
+    },
+    "sections": [
+     {
+      "sel": "main",
+      "tag": "main",
+      "top": 0,
+      "height": 3388,
+      "words": 275,
+      "media": 12,
+      "middle": 0,
+      "heading": {
+       "text": "S/ 750,000",
+       "size": 72,
+       "tag": "h2"
+      },
+      "left": 80,
+      "right": 80,
+      "textLeft": 80,
+      "textRight": 80,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 3388,
+      "height": 374,
+      "words": 31,
+      "media": 0,
+      "middle": 233,
+      "heading": {
+       "text": "CGL",
+       "size": 27,
+       "tag": "span"
+      },
+      "left": 80,
+      "right": 168,
+      "textLeft": 80,
+      "textRight": 168,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Departamento con terraza urbana",
+      "size": 62,
+      "top": 208,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 80,
+      "n": 11
+     },
+     {
+      "x": 1044,
+      "n": 2
+     },
+     {
+      "x": 101,
+      "n": 1
+     },
+     {
+      "x": 534,
+      "n": 1
+     },
+     {
+      "x": 763,
+      "n": 1
+     },
+     {
+      "x": 942,
+      "n": 1
+     },
+     {
+      "x": 968,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 18,
+    "bodySize": 15,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.04,
+    "voidBox": {
+     "x": 420,
+     "y": 360,
+     "w": 840,
+     "h": 60
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"EN VENTA\" above \"S/ 750,000\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence."
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "3 tiny uppercase letter-spaced labels (e.g. \"Empresa\", \"Servicios\", \"Contacto\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "1 gradient fill(s): div.property-detail-hero-overlay → linear-gradient(90deg, rgba(9, 17, 27, 0.82), rgba(9, 17, 27, 0.32) 78%), linear-gradient(0deg, rgba(9, 17, 27",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "2 thin rule(s)/divider line(s): header.site-header.site-header-solid 1440px | div.container.footer-bottom 1280px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Low-contrast text: \"Datos del inmueble\" 4.3:1 needs 4.5:1; \"Distribución\" 4.3:1 needs 4.5:1; \"Equipamiento\" 4.3:1 needs 4.5:1",
+   "fix": "Darken or lighten the text colour."
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "14 different font sizes (8, 12, 13, 14, 15, 16, 17, 18, 19, 20, 27, 43, 62, 72).",
+   "fix": "A page needs about five: display, heading, lead, body, small."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "6 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px."
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 0 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "D:\\Grupo_CGL\\.taste-skill\\redo-desktop\\desktop-fold.jpg",
+   "pages": [
+    "D:\\Grupo_CGL\\.taste-skill\\redo-desktop\\desktop-page-01.jpg",
+    "D:\\Grupo_CGL\\.taste-skill\\redo-desktop\\desktop-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
