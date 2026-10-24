@@ -373,7 +373,7 @@ p { color: #5e646b; line-height: 1.72; }
 .project-overview-card dd { margin: 0; color: #192e47; font-size: .82rem; font-weight: 700; line-height: 1.4; }
 .project-overview-action { margin-top: 24px; padding-top: 20px; border-top: 1px solid #dec9a7; text-align: center; }
 .project-overview-cta { min-width: 190px; }
-.project-scope { padding: 50px 0 54px; background: #f5f4ef; }
+.project-scope { padding: 50px 0 54px; background: #eef3f6; }
 .project-scope-grid { display: grid; grid-template-columns: minmax(250px, .72fr) minmax(0, 1.58fr); align-items: start; gap: clamp(45px, 6vw, 82px); }
 .project-scope-intro h2 { margin-bottom: 14px; color: #192e47; font-size: clamp(2.1rem, 3.4vw, 3.2rem); }
 .project-scope-intro > p:last-child { max-width: 37ch; margin: 0; color: #5b6877; font-size: .94rem; line-height: 1.62; }
