@@ -477,6 +477,7 @@ p { color: #5e646b; line-height: 1.72; }
 .property-summary h2 { margin: 0; color: #192e47; font-size: clamp(3.2rem, 5.1vw, 4.7rem); font-weight: 500; line-height: .96; letter-spacing: -.045em; font-variant-numeric: tabular-nums; }
 .property-summary-price > span { color: #526172; font-size: clamp(1.65rem, 2.5vw, 2.3rem); font-weight: 400; line-height: 1; letter-spacing: -.03em; white-space: nowrap; }
 .property-summary-maintenance { margin: 0 0 17px; color: #647488; font-size: .98rem; line-height: 1.45; }
+.property-summary-maintenance-spacer { height: 1.421rem; flex: 0 0 auto; display: block; margin-bottom: 17px; }
 .property-summary-description { max-width: 55ch; margin: 0; color: #526172; font-size: 1rem; line-height: 1.55; text-wrap: pretty; }
 .property-summary-visual { grid-column: 2; min-width: 0; min-height: 420px; }
 .property-summary-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -492,7 +493,7 @@ p { color: #5e646b; line-height: 1.72; }
 .property-summary-highlights li:first-child { padding-left: 0; border-left: 0; }
 .property-summary-highlights li > svg { flex: 0 0 auto; color: #b77718; }
 .property-summary-highlights li span { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
-.property-summary-highlights strong { font-size: 1.08rem; line-height: 1.2; white-space: nowrap; }
+.property-summary-highlights strong { font-size: 1.08rem; line-height: 1.2; overflow-wrap: anywhere; }
 .property-summary-highlights small { color: #526477; font-size: .82rem; line-height: 1.3; }
 .property-record-spacer { height: 1.23rem; flex: 0 0 auto; margin-top: 24px; }
 .property-explorer { padding: 34px 0 28px; background: #f4f8fb; }
@@ -673,6 +674,7 @@ p { color: #5e646b; line-height: 1.72; }
   .catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .property-photo-mosaic { height: 460px; }
   .property-summary-info { padding-right: 82px; }
+  .property-summary-maintenance-spacer { display: none; }
   .property-summary-action { left: 58%; width: 320px; }
   .property-summary-highlights { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 0; }
   .property-summary-highlights li:nth-child(odd) { padding-left: 0; border-left: 0; }

@@ -219,8 +219,10 @@ function PropertyDetailContent({ property }: { property: Property }) {
   const openPhoto: OpenPhoto = (index, trigger) => { setReturnFocus(trigger); setLightboxIndex(index) }
   const location = [property.location.district, property.location.province].filter(Boolean).join(', ')
   const contactUrl = propertyContactUrl(property)
-  const highlights = propertyHighlights(property)
-  const highlightIcons = { Área: Maximize2, Dormitorios: BedDouble, Baños: Bath, 'Servicios higiénicos': Bath, Estacionamientos: CarFront }
+  const highlights = propertyHighlights(property).map((item) => item.label === 'Área' && item.value.endsWith(' de terreno')
+    ? { label: 'Área de terreno', value: item.value.replace(' de terreno', '') }
+    : item)
+  const highlightIcons = { Área: Maximize2, 'Área de terreno': Maximize2, Dormitorios: BedDouble, Baños: Bath, 'Servicios higiénicos': Bath, Estacionamientos: CarFront }
   const summaryImage = photos[0]?.src ?? property.image
 
   return <div className="property-detail-page">
@@ -245,7 +247,9 @@ function PropertyDetailContent({ property }: { property: Property }) {
               <h2>{property.price ? formatMoney(property.price.amount, property.price.currency) : 'Precio a consultar'}</h2>
               {property.price?.period && <span>/ {property.price.period}</span>}
             </div>
-            {property.maintenance && <p className="property-summary-maintenance">Mantenimiento: {formatMoney(property.maintenance.amount, property.maintenance.currency)} / mes</p>}
+            {property.maintenance
+              ? <p className="property-summary-maintenance">Mantenimiento: {formatMoney(property.maintenance.amount, property.maintenance.currency)} / mes</p>
+              : <span className="property-summary-maintenance-spacer" aria-hidden="true" />}
             <p className="property-summary-description">{property.summary}</p>
           </div>
           <ul className="property-summary-highlights">{highlights.map((item) => { const Icon = highlightIcons[item.label as keyof typeof highlightIcons]; return <li key={item.label}><Icon size={27} strokeWidth={1.65} aria-hidden="true" /><span><strong>{item.value}</strong><small>{item.label}</small></span></li> })}</ul>
