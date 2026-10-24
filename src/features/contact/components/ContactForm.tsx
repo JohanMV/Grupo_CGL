@@ -1,8 +1,7 @@
 import { useRef, useState, type FormEvent, type ReactNode } from 'react'
 import { WhatsappLogo } from '@phosphor-icons/react'
 import { useSearchParams } from 'react-router-dom'
-
-const whatsappNumber = '51916842610'
+import { contactData } from '@/data/site'
 
 const serviceOptions = [
   { value: 'Inmobiliaria', contextualLabel: '¿Qué operación necesitas?', contextualOptions: ['Comprar una propiedad', 'Vender una propiedad', 'Alquilar una propiedad', 'Poner mi propiedad en alquiler', 'Valorización o asesoría', 'Otro servicio inmobiliario'], locationLabel: 'Distrito o ubicación' },
@@ -90,7 +89,7 @@ export function ContactForm() {
       `Descripción: ${values.message.trim()}`,
     ].filter(Boolean).join('\n')
 
-    window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
+    window.location.href = `https://wa.me/${contactData.whatsappNumber}?text=${encodeURIComponent(message)}`
   }
 
   return <form ref={formRef} className="contact-form" onSubmit={submit} noValidate>

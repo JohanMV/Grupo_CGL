@@ -96,7 +96,12 @@ p { color: #5e646b; line-height: 1.72; }
 .mobile-subnav a { min-height: 58px; display: flex; align-items: center; gap: 9px; padding: 10px 11px; color: #f3f5f7; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.055); backdrop-filter: blur(8px); font-size: .82rem; font-weight: 600; line-height: 1.25; transition: color .25s ease, border-color .25s ease, background-color .25s ease, transform .25s ease; }
 .mobile-subnav a svg { flex: 0 0 auto; color: #d7a44d; }
 .mobile-subnav a:hover, .mobile-subnav a:focus-visible { color: #fff; border-color: rgba(215,164,77,.55); background: rgba(255,255,255,.1); transform: translateY(-1px); }
-.mobile-menu > p { margin-top: auto; max-width: 30ch; color: #c1c8cf; }
+.mobile-whatsapp { min-height: 62px; display: flex; align-items: center; gap: 13px; margin-top: auto; padding: 11px 16px; color: #fff; border: 1px solid rgba(75,211,126,.48); background: rgba(37,211,102,.11); backdrop-filter: blur(10px); transition: border-color .25s ease, background-color .25s ease, transform .25s ease; }
+.mobile-whatsapp > svg { flex: 0 0 auto; color: #52d681; }
+.mobile-whatsapp > span { display: flex; flex-direction: column; gap: 2px; }
+.mobile-whatsapp strong { font-size: .95rem; line-height: 1.2; }
+.mobile-whatsapp small { color: #d3dae0; font-size: .72rem; letter-spacing: .02em; }
+.mobile-whatsapp:hover, .mobile-whatsapp:focus-visible { border-color: rgba(82,214,129,.85); background: rgba(37,211,102,.18); transform: translateY(-1px); }
 
 @keyframes mega-menu-in {
   from { opacity: 0; transform: translateX(-50%) translateY(-8px) scale(.985); }
@@ -635,7 +640,7 @@ p { color: #5e646b; line-height: 1.72; }
 .footer-brand p { max-width: 34ch; margin-top: 24px; color: #949da7; font-size: .85rem; }
 .footer-grid h3 { margin-bottom: 20px; color: #d5aa62; font-size: .73rem; text-transform: uppercase; letter-spacing: .1em; }
 .footer-grid > div:not(.footer-brand) { display: flex; flex-direction: column; gap: 12px; color: #c3c9cf; font-size: .86rem; }
-.footer-grid > div:last-child > span { color: #f1f3f5; font-weight: 650; }
+.footer-grid > div:last-child > a { color: #f1f3f5; font-weight: 650; }
 .footer-grid a:hover { color: #fff; }
 .social-links { display: flex; gap: 8px; margin-top: 10px; }
 .social-links a { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid #3b424b; }

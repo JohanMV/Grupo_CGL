@@ -13,7 +13,7 @@ export function Footer() {
         </div>
         <div><h3>Empresa</h3><Link to="/nosotros">Nosotros</Link><Link to="/proyectos">Proyectos</Link><Link to="/contacto">Contacto</Link></div>
         <div><h3>Servicios</h3>{services.map((service) => <Link to={`/servicios/${service.slug}`} key={service.slug}>{service.shortName}</Link>)}</div>
-        <div><h3>Contacto</h3><span>{contactData.phone}</span><span>{contactData.email}</span><div className="social-links"><a href={contactData.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><InstagramLogo /></a><a href={contactData.facebook} target="_blank" rel="noreferrer" aria-label="Facebook"><FacebookLogo /></a></div></div>
+        <div><h3>Contacto</h3><a href={contactData.phoneHref}>{contactData.phone}</a><a href={`mailto:${contactData.email}`}>{contactData.email}</a><div className="social-links"><a href={contactData.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><InstagramLogo /></a><a href={contactData.facebook} target="_blank" rel="noreferrer" aria-label="Facebook"><FacebookLogo /></a></div></div>
       </div>
       <div className="container footer-bottom">
         <Link to="/contacto">Solicitar asesoría <ArrowUpRight /></Link>

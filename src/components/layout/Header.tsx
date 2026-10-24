@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { Buildings, CaretDown, Crane, HouseLine, List, PaintBrush, X } from '@phosphor-icons/react'
+import { Buildings, CaretDown, Crane, HouseLine, List, PaintBrush, WhatsappLogo, X } from '@phosphor-icons/react'
 import { useMotionValueEvent, useScroll } from 'motion/react'
 import heroImage from '@/assets/images/hero-residence.webp'
 import { services } from '@/data/services'
+import { contactData } from '@/data/site'
 
 const serviceIcons = [HouseLine, Crane, PaintBrush, Buildings]
 
@@ -89,7 +90,10 @@ export function Header() {
           </div>
           <Link to="/proyectos">Proyectos</Link><Link to="/propiedades">Propiedades</Link><Link to="/contacto">Contacto</Link>
         </nav>
-        <p>Soluciones para cada etapa del inmueble y el proyecto.</p>
+        <a className="mobile-whatsapp" href={`https://wa.me/${contactData.whatsappNumber}`} target="_blank" rel="noreferrer" onClick={() => setMobileOpen(false)}>
+          <WhatsappLogo size={26} weight="fill" aria-hidden="true" />
+          <span><strong>WhatsApp</strong><small>{contactData.phone}</small></span>
+        </a>
       </div>
     </>
   )
