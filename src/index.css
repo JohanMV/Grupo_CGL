@@ -809,7 +809,8 @@ p { color: #5e646b; line-height: 1.72; }
   .property-summary-panel { grid-template-columns: 1fr; }
   .property-summary-info { grid-column: 1; grid-row: 1; padding: 36px 34px; }
   .property-summary-visual { grid-column: 1; grid-row: 2; min-height: 340px; }
-  .property-summary-action { position: relative; top: auto; left: auto; grid-column: 1; grid-row: 2; align-self: center; justify-self: stretch; width: auto; margin: 28px; }
+  .property-summary-action { position: relative; top: auto; right: auto; left: auto; grid-column: 1; grid-row: 2; align-self: center; justify-self: stretch; width: auto; margin: 28px; }
+  .property-record-spacer { display: none; }
   .property-photo-gallery { padding-top: 24px; padding-bottom: 0; }
   .property-photo-mosaic { display: none; }
   .property-mobile-gallery { display: block; touch-action: pan-y; }
