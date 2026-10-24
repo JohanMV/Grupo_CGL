@@ -822,8 +822,10 @@ p { color: #5e646b; line-height: 1.72; }
   .project-overview-services { margin-top: 30px; padding-top: 0; border-top: 0; }
   .project-overview-card { padding: 27px 24px 23px; }
   .project-scope { padding: 44px 0 48px; }
-  .project-scope-cards { grid-template-columns: 1fr; gap: 12px; }
+  .project-scope-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .project-scope-cards article { min-height: 0; }
+  .project-scope-cards article:last-child { grid-column: 1 / -1; }
+  .project-scope-cards article > svg { align-self: center; }
   .related-projects .container > div { grid-template-columns: 1fr; }
   .catalog-filters { grid-template-columns: 1fr; }
   .catalog-search { grid-column: auto; }
@@ -918,7 +920,7 @@ p { color: #5e646b; line-height: 1.72; }
   .project-overview-card dl > div { grid-template-columns: 24px minmax(0, 1fr); gap: 4px 10px; }
   .project-overview-card dd { grid-column: 2; }
   .project-overview-cta { width: 100%; min-width: 0; }
-  .project-scope-cards article { padding: 23px 20px 24px; }
+  .project-scope-cards article { padding: 20px 18px 22px; }
   .property-detail-hero, .property-detail-hero-content { min-height: 320px; }
   .property-detail-hero-content { padding-bottom: 28px; }
   .property-detail-hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
