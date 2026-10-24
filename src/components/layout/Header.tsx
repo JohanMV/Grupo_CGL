@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Buildings, CaretDown, Crane, HouseLine, List, PaintBrush, X } from '@phosphor-icons/react'
 import { useMotionValueEvent, useScroll } from 'motion/react'
+import heroImage from '@/assets/images/hero-residence.webp'
 import { services } from '@/data/services'
 
 const serviceIcons = [HouseLine, Crane, PaintBrush, Buildings]
@@ -71,6 +72,7 @@ export function Header() {
         </div>
       </header>
       <div id="mobile-navigation" className={`mobile-menu ${mobileOpen ? 'is-open' : ''}`} aria-hidden={!mobileOpen}>
+        <img className="mobile-menu-background" src={heroImage} alt="" aria-hidden="true" />
         <button className="mobile-close" type="button" aria-label="Cerrar menú" onClick={() => setMobileOpen(false)}><X size={28} /></button>
         <nav aria-label="Navegación móvil" onClick={() => setMobileOpen(false)}>
           <Link to="/">Inicio</Link><Link to="/nosotros">Nosotros</Link><Link to="/servicios">Servicios</Link>
