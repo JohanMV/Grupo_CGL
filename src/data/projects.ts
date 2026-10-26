@@ -23,7 +23,7 @@ export const projects: Project[] = [
     overviewLead: 'Una vivienda que equilibra arquitectura, naturaleza y confort en un entorno privilegiado.',
     description: 'Este proyecto integra diseño contemporáneo, espacios abiertos y materialidad cálida, logrando una residencia funcional y atemporal que se conecta con el paisaje.',
     location: 'Lima, Perú', projectType: 'Vivienda unifamiliar', status: 'Finalizado', year: '2024',
-    image: hero, banner: hero, gallery: [hero, residenceTwo, residenceThree],
+    image: hero, gallery: [hero, residenceTwo, residenceThree],
     scope: [
       { title: 'Diseño arquitectónico', description: 'Desarrollo de una propuesta funcional y atemporal, integrada al entorno natural.' },
       { title: 'Coordinación de especialidades', description: 'Integración de ingeniería, estructuras e instalaciones para un resultado eficiente.' },
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     summary: 'Carpintería, piedra e iluminación articuladas para un uso cotidiano.',
     description: 'Una intervención integral que ordena almacenamiento, superficies de trabajo e iluminación para crear una cocina cálida, funcional y duradera.',
     location: 'Lima, Perú', projectType: 'Remodelación residencial', status: 'Finalizado', year: '2025',
-    image: kitchenOne, banner: kitchenOne, gallery: [kitchenOne, kitchenTwo, kitchenThree],
+    image: kitchenOne, gallery: [kitchenOne, kitchenTwo, kitchenThree],
     scope: [
       { title: 'Diseño interior', description: 'Definición de distribución, materialidad y detalles para optimizar el uso cotidiano.' },
       { title: 'Mobiliario a medida', description: 'Desarrollo de carpintería funcional según las dimensiones y necesidades del espacio.' },
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     summary: 'Recepción y áreas de trabajo con una identidad sobria y funcional.',
     description: 'La adecuación articula imagen corporativa, privacidad y eficiencia operativa mediante una distribución clara y acabados de carácter institucional.',
     location: 'Lima, Perú', projectType: 'Oficina corporativa', status: 'Finalizado', year: '2025',
-    image: officeOne, banner: officeOne, gallery: [officeOne, officeTwo, officeThree],
+    image: officeOne, gallery: [officeOne, officeTwo, officeThree],
     scope: [
       { title: 'Distribución interior', description: 'Organización de recepción, puestos de trabajo y áreas privadas para recorridos eficientes.' },
       { title: 'Acabados corporativos', description: 'Selección de materiales y detalles alineados con una identidad sobria y profesional.' },
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     summary: 'Un entorno profesional con luz, acústica y recorridos claros.',
     description: 'La propuesta combina zonas colaborativas y espacios de concentración, equilibrando flexibilidad, confort acústico e identidad profesional.',
     location: 'Lima, Perú', projectType: 'Oficina corporativa', status: 'Finalizado', year: '2025',
-    image: workspaceOne, banner: workspaceOne, gallery: [workspaceOne, workspaceTwo, workspaceThree],
+    image: workspaceOne, gallery: [workspaceOne, workspaceTwo, workspaceThree],
     scope: [
       { title: 'Planeamiento', description: 'Definición de necesidades, aforo y relaciones funcionales para el espacio de trabajo.' },
       { title: 'Diseño de espacios', description: 'Desarrollo de ambientes flexibles que favorecen colaboración y concentración.' },

@@ -19,6 +19,7 @@ export function ProjectDetailPage() {
   const { slug } = useParams()
   const project = getProject(slug)
   if (!project) return <NotFoundPage compact />
+  const projectBanner = project.gallery[0] ?? project.image
   const related = projects.filter((item) => item.slug !== project.slug).slice(0, 2)
   const contactUrl = `/contacto?servicio=${contactServiceByCategory[project.category]}&proyecto=${encodeURIComponent(project.title)}`
   const projectDetails = [
@@ -28,8 +29,8 @@ export function ProjectDetailPage() {
     { label: 'Estado', value: project.status, Icon: BadgeCheck },
     { label: 'Fecha', value: project.year, Icon: CalendarDays },
   ]
-  return <><section className={`project-detail-hero${project.banner ? ' project-detail-hero-image' : ''}`}>
-      {project.banner && <><img className="project-detail-hero-background" src={project.banner} alt="" /><div className="project-detail-hero-overlay" aria-hidden="true" /></>}
+  return <><section className="project-detail-hero project-detail-hero-image">
+      <img className="project-detail-hero-background" src={projectBanner} alt="" /><div className="project-detail-hero-overlay" aria-hidden="true" />
       <div className="container"><Breadcrumbs items={[{ label: 'Inicio', to: '/' }, { label: 'Proyectos', to: '/proyectos' }, { label: project.title }]} /><p className="eyebrow">{project.category}</p><h1>{project.title}</h1><p>{project.summary}</p></div>
     </section>
     <section className="container project-gallery-wrap"><Lightbox images={project.gallery} title={project.title} /></section>

@@ -26,7 +26,6 @@ export interface Project {
   status: string
   year: string
   image: string
-  banner?: string
   gallery: string[]
   scope: Array<{ title: string; description: string }>
 }

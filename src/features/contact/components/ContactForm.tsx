@@ -1,13 +1,13 @@
 import { useRef, useState, type FormEvent, type ReactNode } from 'react'
-import { WhatsappLogo } from '@phosphor-icons/react'
+import { Buildings, Crane, HouseLine, PaintBrush, WhatsappLogo } from '@phosphor-icons/react'
 import { useSearchParams } from 'react-router-dom'
 import { contactData } from '@/data/site'
 
 const serviceOptions = [
-  { value: 'Inmobiliaria', contextualLabel: '¿Qué operación necesitas?', contextualOptions: ['Comprar una propiedad', 'Vender una propiedad', 'Alquilar una propiedad', 'Poner mi propiedad en alquiler', 'Valorización o asesoría', 'Otro servicio inmobiliario'], locationLabel: 'Distrito o ubicación' },
-  { value: 'Construcción e ingeniería', contextualLabel: 'Tipo de proyecto', contextualOptions: ['Construcción de vivienda', 'Diseño y planos arquitectónicos', 'Construcción comercial', 'Supervisión de obra', 'Ingeniería o expediente técnico', 'Otro'], locationLabel: 'Ubicación del proyecto' },
-  { value: 'Remodelación integral', contextualLabel: '¿Qué deseas remodelar?', contextualOptions: ['Vivienda completa', 'Cocina', 'Baño', 'Oficina o local comercial', 'Acabados y acondicionamiento', 'Otro'], locationLabel: 'Ubicación del inmueble' },
-  { value: 'Administración de edificios', contextualLabel: 'Tipo de inmueble', contextualOptions: ['Edificio residencial', 'Condominio', 'Edificio comercial', 'Otro'], locationLabel: 'Ubicación del inmueble' },
+  { value: 'Inmobiliaria', shortLabel: 'Inmobiliaria', icon: HouseLine, contextualLabel: '¿Qué operación necesitas?', contextualOptions: ['Comprar una propiedad', 'Vender una propiedad', 'Alquilar una propiedad', 'Poner mi propiedad en alquiler', 'Valorización o asesoría', 'Otro servicio inmobiliario'] },
+  { value: 'Construcción e ingeniería', shortLabel: 'Construcción', icon: Crane, contextualLabel: 'Tipo de proyecto', contextualOptions: ['Construcción de vivienda', 'Diseño y planos arquitectónicos', 'Construcción comercial', 'Supervisión de obra', 'Ingeniería o expediente técnico', 'Otro'] },
+  { value: 'Remodelación integral', shortLabel: 'Remodelación', icon: PaintBrush, contextualLabel: '¿Qué deseas remodelar?', contextualOptions: ['Vivienda completa', 'Cocina', 'Baño', 'Oficina o local comercial', 'Acabados y acondicionamiento', 'Otro'] },
+  { value: 'Administración de edificios', shortLabel: 'Administración', icon: Buildings, contextualLabel: 'Tipo de inmueble', contextualOptions: ['Edificio residencial', 'Condominio', 'Edificio comercial', 'Otro'] },
 ] as const
 
 const serviceMap: Record<string, string> = {
@@ -50,7 +50,7 @@ export function ContactForm() {
 
   const update = (field: FormField, value: string) => {
     const nextValues = field === 'service'
-      ? { ...values, service: value, context: '', location: '' }
+      ? { ...values, service: value, context: '' }
       : { ...values, [field]: value }
     setValues(nextValues)
     setErrors((current) => field === 'service'
@@ -93,20 +93,25 @@ export function ContactForm() {
   }
 
   return <form ref={formRef} className="contact-form" onSubmit={submit} noValidate>
+    <fieldset className="service-choice" aria-describedby={errors.service ? 'contact-service-error' : undefined}>
+      <legend>Tipo de servicio requerido <b aria-hidden="true">*</b></legend>
+      <div className="service-options">{serviceOptions.map(({ value, shortLabel, icon: Icon }) => <label className={`service-option${values.service === value ? ' is-selected' : ''}`} key={value}>
+        <input type="radio" name="service" value={value} checked={values.service === value} onChange={() => update('service', value)} required aria-invalid={Boolean(errors.service)} />
+        <Icon size={28} weight="light" aria-hidden="true" /><span>{shortLabel}</span>
+      </label>)}</div>
+      {errors.service && <small id="contact-service-error" className="field-error" role="alert">{errors.service}</small>}
+    </fieldset>
     <Field id="contact-name" label="Nombre completo" error={errors.name} required>
       <input id="contact-name" name="name" value={values.name} onChange={(event) => update('name', event.target.value)} onBlur={() => validateField('name')} placeholder="Ej. Juan Pérez" autoComplete="name" required aria-invalid={Boolean(errors.name)} aria-describedby={errors.name ? 'contact-name-error' : undefined} />
-    </Field>
-    <Field id="contact-phone" label="Teléfono / WhatsApp" error={errors.phone} required>
-      <input id="contact-phone" name="phone" type="tel" inputMode="tel" value={values.phone} onChange={(event) => update('phone', event.target.value)} onBlur={() => validateField('phone')} placeholder="+51 987 654 321" autoComplete="tel" required aria-invalid={Boolean(errors.phone)} aria-describedby={errors.phone ? 'contact-phone-error' : undefined} />
     </Field>
     <Field id="contact-email" label="Correo electrónico" error={errors.email}>
       <input id="contact-email" name="email" type="email" value={values.email} onChange={(event) => update('email', event.target.value)} onBlur={() => validateField('email')} placeholder="correo@ejemplo.com" autoComplete="email" aria-invalid={Boolean(errors.email)} aria-describedby={errors.email ? 'contact-email-error' : undefined} />
     </Field>
-    <Field id="contact-service" label="Servicio requerido" error={errors.service} required>
-      <select id="contact-service" name="service" value={values.service} onChange={(event) => update('service', event.target.value)} onBlur={() => validateField('service')} required aria-invalid={Boolean(errors.service)} aria-describedby={errors.service ? 'contact-service-error' : undefined}>
-        <option value="">Selecciona el servicio que necesitas</option>
-        {serviceOptions.map((service) => <option value={service.value} key={service.value}>{service.value}</option>)}
-      </select>
+    <Field id="contact-phone" label="Teléfono / WhatsApp" error={errors.phone} required>
+      <input id="contact-phone" name="phone" type="tel" inputMode="tel" value={values.phone} onChange={(event) => update('phone', event.target.value)} onBlur={() => validateField('phone')} placeholder="+51 987 654 321" autoComplete="tel" required aria-invalid={Boolean(errors.phone)} aria-describedby={errors.phone ? 'contact-phone-error' : undefined} />
+    </Field>
+    <Field id="contact-location" label="Distrito o ubicación del inmueble" helper="Opcional">
+      <input id="contact-location" name="location" value={values.location} onChange={(event) => update('location', event.target.value)} placeholder="Ej. Miraflores, San Isidro, Surco" autoComplete="address-level2" />
     </Field>
     {selectedService && <fieldset className="contextual-fields" aria-live="polite">
       <legend>Información sobre {selectedService.value}</legend>
@@ -115,9 +120,6 @@ export function ContactForm() {
           <option value="">Selecciona una opción</option>
           {selectedService.contextualOptions.map((option) => <option value={option} key={option}>{option}</option>)}
         </select>
-      </Field>
-      <Field id="contact-location" label={selectedService.locationLabel} helper="Opcional">
-        <input id="contact-location" name="location" value={values.location} onChange={(event) => update('location', event.target.value)} placeholder="Distrito o ciudad" autoComplete="address-level2" />
       </Field>
     </fieldset>}
     <Field id="contact-message" className="form-field--full" label="Cuéntanos sobre tu proyecto" error={errors.message} required>
