@@ -40,3 +40,5 @@ service-account*.json
 *.sln
 *.sw?
 *.impeccable
+*.taste-skill
+*.artifacts 
