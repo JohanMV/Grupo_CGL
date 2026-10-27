@@ -20,7 +20,7 @@ export function ServicesShowcase() {
       <div className="container">
         <Reveal><SectionHeading title="Soluciones para cada etapa de tu inmueble." text="Cuatro especialidades que se complementan para atender necesidades inmobiliarias, técnicas y operativas." /></Reveal>
         <div className="service-grid">
-          {services.map((service, index) => <Reveal key={service.slug} delay={index * 0.06} className={`service-card service-card-${index + 1}`}>
+          {services.map((service, index) => <Reveal key={service.slug} delay={index * 0.06} amount={0.05} className={`service-card service-card-${index + 1}`}>
             <Link to={`/servicios/${service.slug}`}><div className="service-image"><FallbackImage src={service.image} alt={service.name} /></div><div className="service-card-copy"><span>0{index + 1}</span><h3>{service.shortName}</h3><p>{homeServiceDescriptions[service.slug]}</p><b>Conocer servicio <ArrowRight /></b></div></Link>
           </Reveal>)}
         </div>
